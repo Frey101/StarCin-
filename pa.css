@@ -3,20 +3,24 @@ body {
     color: rgb(0, 0, 0);
 }
 
+h1{
+    margin-left: 1%;
+    color:white;
+}
+
 nav {
     background-color: #1F1753;
     color: white;
-    width: 101.8%;
+    width: 101.5%;
     margin-top: -2%;
     margin-left: -1%;
-    height: 71px;
+    height: 105px;
 }
 
 nav li {
-    /* margin-right: 20px; */
+
     font-size: 24px;
     font-weight: bold;
-    /* margin-top: 1%; */
     display: flex;
     align-items: center;
 }
@@ -30,7 +34,26 @@ nav ul {
 }
 
 section {
-    width: 80%;
-    height: 100px;
-    background-color: #FFBE59;
+    display: flex;
+    width: 90%;
+    height: 200px;
+    background-color: #AE080B;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 4%;
+}
+
+.mf{
+    background-color: #FFB042;
+}
+
+
+
+footer{
+    width: 101%;
+    background-color: black;
+    color: aliceblue;
+    height: 26px;
+    text-align: center;
+    margin: 10% 0px 0px -8px;
 }
