@@ -7,6 +7,21 @@ h1{
     margin-left: 1%;
     color:white;
 }
+.acc{
+    background-image: url(cine.jpg);
+    width: 101%;
+    height: 633px;
+    background-size: cover;
+    margin: -6.8% 0px 0px -8px;
+}
+.acc h1{
+    font-family: Oswald;
+    text-align: center;
+    font-size: 150px;
+    padding-top:15%;
+    color:#FFB042;
+}
+
 
 nav {
     background-color: #1F1753;
