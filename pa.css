@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(254, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: #1F1753;
+    color: white;
+    width: 101.8%;
+    margin-top: -2%;
+    margin-left: -1%;
+    height: 71px;
+}
+
+nav li {
+    /* margin-right: 20px; */
+    font-size: 24px;
+    font-weight: bold;
+    /* margin-top: 1%; */
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+section {
+    width: 80%;
+    height: 100px;
+    background-color: #FFBE59;
+}
