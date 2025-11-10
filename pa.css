@@ -1,36 +1,24 @@
 body {
-    background-color: rgb(254, 255, 255);
-    color: rgb(0, 0, 0);
+    background-image: url("cine.jpg");
+    color: white;
+    background-size: cover;
 }
 
 h1{
     margin-left: 1%;
     color:white;
 }
-.acc{
-    background-image: url(cine.jpg);
-    width: 101%;
-    height: 633px;
-    background-size: cover;
-    margin: -6.8% 0px 0px -8px;
-}
+
 .acc h1{
     font-family: Oswald;
     text-align: center;
     font-size: 150px;
-    padding-top:15%;
-    color:#FFB042;
+    padding-bottom: 18%;
+    color: #FFB042;
+    padding-top: 4%;
 }
 
 
-nav {
-    background-color: #1F1753;
-    color: white;
-    width: 101.5%;
-    margin-top: -2%;
-    margin-left: -1%;
-    height: 105px;
-}
 
 nav li {
 
