@@ -7,6 +7,7 @@ body {
 h1{
     margin-left: 1%;
     color:white;
+
 }
 
 .acc h1{
@@ -46,16 +47,37 @@ section {
     display: flex;
     width: 90%;
     height: 200px;
-    background-color: #AE080B;
-    border-radius: 25px;
+    background-color: #00000085;
+    border-radius: 9px;
     margin-top: 20px;
     margin-left: 4%;
 }
 
 .mf{
-    background-color: #FFB042;
+    width: 90%;
+    background-color: #00000085;
+    display: flex;
+    height: 423px;
 }
 
+
+
+div#slider figure img { height: 315px;  margin-right: 1%; }
+div#slider { width: 80%; max-width: 1000px; overflow: hidden }
+div#slider { margin-left: -3%;
+    margin-top: 1%;
+    width: 607%;
+    max-width: 1300px; }
+div#slider figure {
+    position: relative;
+    width: 540%;
+    margin: 0px;
+    padding: 66px;
+    font-size: 0;
+    text-align: left;
+    margin-left: -5%;
+
+}
 
 
 footer{
