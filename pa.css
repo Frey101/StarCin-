@@ -4,19 +4,18 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Fond spécifique par page */
 .index {
   background-image: url('cine.jpg');
 }
 
-/*.contact {
+.contact {
   background-image: url('../images/contact.jpg');
 }
 
 .about {
   background-image: url('../images/about.jpg');
 }
-*/
+
 
 
 h1{
