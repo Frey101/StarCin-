@@ -1,8 +1,23 @@
 body {
-    background-image: url("cine.jpg");
-    color: white;
-    background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+/* Fond spécifique par page */
+.index {
+  background-image: url('cine.jpg');
+}
+
+/*.contact {
+  background-image: url('../images/contact.jpg');
+}
+
+.about {
+  background-image: url('../images/about.jpg');
+}
+*/
+
 
 h1{
     margin-left: 1%;
