@@ -29,7 +29,6 @@ h1{
 
 /* INDEX (Menu)  ------------------------------------------------------------------------------------------- */
 .index nav li {
-
    font-size: 24px;
    font-weight: bold;
    display: flex;
@@ -38,7 +37,7 @@ h1{
    margin-right: 5%;
 }
 .index img{
-    margin-right: 58%;
+    margin-right: 50%;
     height: 64px;
     width: 64px;
     margin-top:-0.1%;
@@ -62,6 +61,12 @@ h1{
    color: white;
 }
 
+.index li :hover{
+   color: #000000;
+    /*background-color: black;*/
+    /*border-radius: 20px;*/
+    /*padding: 5px;*/
+}
 /* nom starciné   ----------------------------------------------------------------------------------*/
 .acc h1{
     font-family: Oswald;
