@@ -27,37 +27,60 @@ h1{
 
 }
 
-.acc h1{
-   font-family: Oswald;
-   text-align: center;
-   font-size: 150px;
-   padding-bottom: 18%;
-   color: #FFB042;
-   padding-top: 4%;
+/* INDEX (Menu)  ------------------------------------------------------------------------------------------- */
+.index nav {
+
 }
 
 
-nav li {
+.index nav li {
 
    font-size: 24px;
    font-weight: bold;
    display: flex;
    align-items: center;
+   margin-left: -2%;
+   margin-right: 5%;
+}
+.index img{
+    margin-right: 58%;
+    height: 64px;
+    width: 64px;
+    margin-top:-0.1%;
 }
 
-nav ul {
-   display: flex;
-   list-style-type: none;
-   padding: 10px;
-   justify-content: space-evenly;
-   flex-direction: row;
+
+.index nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top: -7%;
+    position: fixed;
+    width: 100%;
+    background: #b61f0a;
+    height: 7%;
+    margin-left: -2%;
 }
 
 
-li a{
+.index li a{
    text-decoration: none;
    color: white;
 }
+
+
+/* nom starciné   ----------------------------------------------------------------------------------*/
+.acc h1{
+    font-family: Oswald;
+    text-align: center;
+    font-size: 150px;
+    padding-bottom: 18%;
+    color: #FFB042;
+    padding-top: 4%;
+}
+
 
 
 section {

@@ -5,13 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="pa.css" />
-    <title>Document</title>
+    <title>StarCiné</title>
 </head>
 
 <body class="index">
-<nav>
+
+<nav >
+
     <ul>
-        <li><img src="./logo.png" alt="logo" width="100px"></li>
+        <img src="./logo.png" alt="logo">
+
+
         <li><a href="index.html">Accueil</a></li>
         <li><a href="#">Votes</a></li>
         <li><a href="films.html">Films</a></li>
@@ -48,6 +52,27 @@
         </figure>
     </div>
 </section>
+
+<section id="commande">
+    <h2>Passer une commande</h2>
+    <form>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="produit">Produit souhaité</label>
+        <input type="text" id="produit" name="produit" required>
+
+        <label for="message">Message ou demandes spécifiques</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Envoyer la commande</button>
+    </form>
+</section>
+
+
 
 <footer>
     date : 2024-10-11
