@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de33a04b-6335-4e5b-af07-117b2b9b733b" name="Changes" comment="organisation des fichiers">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../image/inception.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../image/interstellar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../image/lalaland.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../image/tenet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../image/thenotebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../image/titanic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../films.html" beforeDir="false" afterPath="$PROJECT_DIR$/../films.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pa.css" beforeDir="false" afterPath="$PROJECT_DIR$/../pa.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Frey101/StarCin-.git&quot;,
+    &quot;accountId&quot;: &quot;c1b164f7-63f5-4bd0-9429-59215b03610a&quot;
+  }
+}</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../../../wamp64/bin/php/php-8.3.26-nts-Win32-vs16-x64/php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="35HrWdrkbYFLj06xFGlNSYxXKqw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "modifAso",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/asyae/OneDrive/Documents/StarCin--main/StarCin--main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de33a04b-6335-4e5b-af07-117b2b9b733b" name="Changes" comment="" />
+      <created>1746199767975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746199767975</updated>
+      <workItem from="1746199767975" duration="948000" />
+      <workItem from="1762777872294" duration="7882000" />
+      <workItem from="1763027939592" duration="1744000" />
+      <workItem from="1763030923039" duration="4617000" />
+      <workItem from="1763462330139" duration="5376000" />
+      <workItem from="1763564523753" duration="1056000" />
+      <workItem from="1763567577133" duration="652000" />
+      <workItem from="1763645549270" duration="1801000" />
+    </task>
+    <task id="LOCAL-00001" summary="ajout de logo">
+      <option name="closed" value="true" />
+      <created>1762778219300</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762778219300</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ajout films et liens">
+      <option name="closed" value="true" />
+      <created>1762791614064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762791614064</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ajout films et liens">
+      <option name="closed" value="true" />
+      <created>1762791799217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762791799217</updated>
+    </task>
+    <task id="LOCAL-00004" summary="corrections des erreurs-&gt;liens">
+      <option name="closed" value="true" />
+      <created>1763028545641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763028545641</updated>
+    </task>
+    <task id="LOCAL-00005" summary="amélioration du fond">
+      <option name="closed" value="true" />
+      <created>1763031234449</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763031234449</updated>
+    </task>
+    <task id="LOCAL-00006" summary="organisation des fichiers">
+      <option name="closed" value="true" />
+      <created>1763564762381</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763564762381</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajout de logo" />
+    <MESSAGE value="ajout films et liens" />
+    <MESSAGE value="corrections des erreurs-&gt;liens" />
+    <MESSAGE value="amélioration du fond" />
+    <MESSAGE value="organisation des fichiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="organisation des fichiers" />
+  </component>
+</project>
