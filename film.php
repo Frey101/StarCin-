@@ -72,6 +72,7 @@
         </div>
     </section>
 
+
     <!-- Similaires -->
     <section class="film-similar">
         <h2>Films similaires</h2>
