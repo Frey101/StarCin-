@@ -11,12 +11,19 @@
 <body class="index">
 
 <nav >
+
     <ul>
         <img src="./image/logo.png" alt="logo">
+
+
         <li><a href="index.php">Accueil</a></li>
-        <li><a href="#">Votes</a></li>
+        <li><a href="vote.php">Votes</a></li>
         <li><a href="films.php">Films</a></li>
-        <li><a href="#">Résultats</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
+        <li><a href="resultat.php">Résultats</a></li>
+        <li><a href="#">Connexion</a></li>
     </ul>
 </nav>
+
+</body>
+
+</html>
