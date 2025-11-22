@@ -24,6 +24,7 @@
 
         <li><li><a href="connexion.php">Connexion</a></li></li>
     </ul>
+
 </nav>
 
 </body>
