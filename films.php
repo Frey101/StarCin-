@@ -3,8 +3,6 @@
 require 'header.php';
 ?>
 
-
-
     <h1 class="page-title">Tous les films</h1>
 
     <div class="films-grid">

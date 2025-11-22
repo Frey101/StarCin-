@@ -3,8 +3,6 @@
     require 'header.php';
     ?>
 
-
-
 <body>
 <link rel="stylesheet" href="forum.css">
 <div id="container">

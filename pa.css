@@ -11,16 +11,6 @@ body {
   background-image: url('./image/cine.jpg');
 }
 
-.contact {
-/*background-image: url('../images/contact.jpg');*/
-    background-color: black;
-}
-
-.about {
-    background-color: black;
- /*background-image: url('../images/about.jpg');*/
-}
-
 
 h1{
    margin-left: 1%;
@@ -56,10 +46,12 @@ p{
    margin-right: 5%;
 }
 .index img{
+
     margin-right: 50%;
     height: 64px;
     width: 64px;
     margin-top:-0.1%;
+    margin-right: 40%;
 }
 .index nav ul {
     display: flex;
