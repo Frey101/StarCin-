@@ -9,7 +9,7 @@ require 'header.php';
 
 
         <a href="film.php" class="film-card">
-            <img src="image/idiana.jpeg" alt="Inception">
+            <img src="image/Ineception.jpg" alt="Inception">
             <h3>Inception</h3>
             <p>⭐ 4.5 / 5</p>
         </a>
