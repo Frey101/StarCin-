@@ -1,0 +1,92 @@
+body {
+
+    background: #f0f2f5;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.index nav ul{
+
+    margin-top: -3.5%;
+
+    margin-left: -4%;
+}
+
+
+
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.film {
+    border: 2px solid transparent;
+    background: #fafafa;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.film:hover {
+    background: #e8f1ff;
+}
+
+.film.selected {
+    border-color: #0078ff;
+    background: #e5f0ff;
+}
+
+.film-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.film-desc {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+#voteBtn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #0078ff;
+    color: white;
+    transition: 0.25s;
+    opacity: 0.5;
+}
+
+#voteBtn.enabled {
+    opacity: 1;
+}
+
+#voteBtn:hover.enabled {
+    background: #005fcc;
+}
+
+#confirmation {
+    margin-top: 20px;
+    background: #d4f8d4;
+    color: #1a7d1a;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}

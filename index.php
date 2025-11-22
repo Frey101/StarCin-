@@ -5,7 +5,27 @@ require 'header.php';
 
 
 
-    <div class="acc"> <h1>StarCiné</h1></div>
+    <div class="acc"> <h1>StarCiné</h1>
+
+        <div class="acc2">
+            <h2>⭐ Bienvenue sur StarCiné : Votre Scrutin Cinéma !</h2>
+            <p>StarCiné est la plateforme où la communauté des passionnés de films prend le pouvoir.   </p>
+            <p>Notre mission est simple : vous permettre de voter et de classer vos films préférés de manière équitable et transparente.</p>
+
+            <p>Que vous soyez un cinéphile aguerri ou simplement à la recherche du meilleur film à voir ce soir, votre voix compte ici !</p>
+
+            <h3> Comment ça Marche ? </h3>
+            <p>1. Créez votre compte </p>
+
+            <p>2. Votez par categorie</p>
+
+            <p>3. Découvrez les résultats </p>
+        </div>
+
+
+
+
+    </div>
 
     <section>
         <h1>Nouveau films:</h1>

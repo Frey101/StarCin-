@@ -11,7 +11,6 @@ require 'header.php';
 
 <body>
 
-
 <h1>Résultats du Vote</h1>
 
 <!-- Année actuelle -->
