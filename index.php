@@ -36,19 +36,19 @@ require 'header.php';
         <h1>Meilleurs films</h1>
         <div id="slider">
             <figure>
-                <img src="./image/mufa.jpeg" alt>
+                <img src="./image/Ineception.jpg" alt>
                 <img src="./image/idiana.jpeg" alt>
                 <img src="./image/mufa.jpeg" alt>
-                <img src="./image/idiana.jpeg" alt>
-                <img src="./image/mufa.jpeg" alt>
-                <img src="./image/idiana.jpeg" alt>
-                <img src="./image/mufa.jpeg" alt>
-                <img src="./image/idiana.jpeg" alt>
-                <img src="./image/mufa.jpeg" alt>
-                <img src="./image/idiana.jpeg" alt>
-                <img src="./image/mufa.jpeg" alt>
-                <img src="./image/idiana.jpeg" alt>
-                <img src="./image/mufa.jpeg" alt>
+                <img src="./image/interstller.jpg" alt>
+                <img src="./image/Vice-versa_2.jpg" alt>
+                <img src="./image/Spider-Man%20Across%20the%20Spider-Verse.jpg" alt>
+                <img src="./image/Super%20Mario%20Bros.jpg" alt>
+                <img src="./image/tenet.jpg" alt>
+                <img src="./image/The%20Batman.jpg" alt>
+                <img src="./image/Les%20Minions%202.jpg" alt>
+                <img src="./image/Parasite.jpg" alt>
+                <img src="./image/Oppenheimer.jpg" alt>
+                <img src="./image/La%20La%20Land.jpg" alt>
             </figure>
         </div>
     </section>
