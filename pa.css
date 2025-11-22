@@ -148,3 +148,84 @@ footer{
    text-align: center;
    margin: 10% 0px 0px -8px;
 }
+
+
+/*   Page Films   */
+.films nav li {
+
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: -2%;
+    margin-right: 5%;
+}
+.films img{
+    margin-right: 58%;
+    height: 64px;
+    width: 64px;
+    margin-top:-0.1%;
+}
+.films nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top: -1%;
+    position: fixed;
+    width: 100%;
+    background: #b61f0a;
+    height: 7%;
+    margin-left: -2%;
+}
+
+.films li a{
+    text-decoration: none;
+    color: white;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.film-card {
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.film-card:hover {
+    transform: scale(1.05);
+}
+
+.film-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.film-card h3 {
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+.film-card p {
+    margin: 0 10px 10px 10px;
+    font-size: 0.9em;
+    color: #ffb400;
+}
