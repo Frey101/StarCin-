@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Page Film - Exemple</title>
+    <title></title>
     <link rel="stylesheet" href="film.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
 
     <!-- Affiche + infos -->
     <section class="film-main">
-        <img src="affiche_inception.jpg" alt="Affiche du film" class="film-poster">
+        <img src="image/Ineception.jpg" alt="Affiche du film" class="film-poster">
 
         <div class="film-info">
             <p><strong>Catégorie :</strong> Science-Fiction</p>
