@@ -1,6 +1,9 @@
 <?php
 // DOIT ÊTRE LA PREMIÈRE INSTRUCTION
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 // Inclure le fichier de connexion à la BDD
 include 'bdd.php';

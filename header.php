@@ -1,3 +1,9 @@
+<?php
+// C'EST CETTE LIGNE QUI MANQUE ET QUI EST NÉCESSAIRE
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,24 +15,35 @@
 </head>
 
 <body class="index">
-
-<nav >
-
+<nav>
     <ul>
-        <img src="./image/logo.png" alt="logo">
-
-
         <li><a href="index.php">Accueil</a></li>
-        <li><a href="vote.php">Votes</a></li>
-        <li><a href="films.php">Films</a></li>
-        <li><a href="resultat.php">Résultats</a></li>
+        <?php
+        // Vérifie si la session 'utilisateur_connecte' est définie et vraie
+        if (isset($_SESSION['utilisateur_connecte']) && $_SESSION['utilisateur_connecte'] === true) {
+            // L'utilisateur est connecté : affiche le lien de DÉCONNEXION
+            echo '<li><a href="films.php">Film</a></li>';
+            echo '<li><a href="vote.php">Vote</a></li>';
+            echo '<li><a href="resultat.php">Resultat</a></li>';
+            echo '<li><a href="forum.php">Forum</a></li>';
 
-        <li><a href="forum.php">Forum</a></li>
-        <li><li><a href="connexion.php">Connexion</a></li></li>
+            echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
+
+            // OPTIONNEL : Afficher l'email de l'utilisateur
+            // if (isset($_SESSION['email'])) {
+            //     echo '<li><span style="color: white;">Bonjour, ' . htmlspecialchars($_SESSION['email']) . '</span></li>';
+            // }
+
+        } else {
+            // L'utilisateur N'EST PAS connecté : affiche les liens de CONNEXION/INSCRIPTION
+            echo '<li><a href="films.php">Film</a></li>';
+            echo '<li><a href="connexion.php">Connexion</a></li>';
+            echo '<li><a href="inscription.php">Inscription</a></li>';
+
+        }
+        ?>
     </ul>
-
 </nav>
-
 </body>
-
 </html>
+
