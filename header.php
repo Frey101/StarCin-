@@ -17,6 +17,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <body class="index">
 <nav>
     <ul>
+        <img src="image/logo.png" alt="logo" />
         <li><a href="index.php">Accueil</a></li>
         <?php
         // Vérifie si la session 'utilisateur_connecte' est définie et vraie
