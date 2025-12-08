@@ -1,64 +1,91 @@
 <?php
-// On inclut le fichier d'en-tête (header)
-require 'header.php';
-?>
+// index.php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// 1. DÉFINITION DES CHEMINS GLOBAUX
+// L'ordre est important : définissez les constantes une seule fois, au début.
+
+// ROOT_DIR : Chemin ABSOLU du système de fichiers pour les inclusions (require/include)
+// __DIR__ est le dossier où se trouve index.php.
+if (!defined('ROOT_DIR')) {
+    define('ROOT_DIR', __DIR__ . '/');
+}
+
+// ROOT_PATH : Chemin URL (relatif au domaine) pour les liens et les redirections header('Location: ...')
+if (!defined('ROOT_PATH')) {
+    // IMPORTANT : Utilisez le chemin du sous-dossier si l'application n'est pas à la racine du domaine.
+    // Votre chemin est /StarCin--main/
+    define('ROOT_PATH', '/StarCin--main/');
+}
 
 
-
-    <div class="acc"> <h1>StarCiné</h1>
-
-        <div class="acc2">
-            <h2>⭐ Bienvenue sur StarCiné : Votre Scrutin Cinéma !</h2>
-            <p>StarCiné est la plateforme où la communauté des passionnés de films prend le pouvoir.   </p>
-            <p>Notre mission est simple : vous permettre de voter et de classer vos films préférés de manière équitable et transparente.</p>
-
-            <p>Que vous soyez un cinéphile aguerri ou simplement à la recherche du meilleur film à voir ce soir, votre voix compte ici !</p>
-
-            <h3> Comment ça Marche ? </h3>
-            <p>1. Créez votre compte </p>
-
-            <p>2. Votez par categorie</p>
-
-            <p>3. Découvrez les résultats </p>
-        </div>
+// 2. Inclusion de TOUTES les classes nécessaires (utilise ROOT_DIR)
+require_once ROOT_DIR . 'src/Database/DBConnection.php';
+require_once ROOT_DIR . 'src/Controller/SecurityController.php';
+require_once ROOT_DIR . 'src/Controller/LoginController.php';
+require_once ROOT_DIR . 'src/Controller/Admin/AdminFilmController.php';
+require_once ROOT_DIR . 'src/Entity/User.php';
+require_once ROOT_DIR . 'src/Entity/Film.php';
+require_once ROOT_DIR . 'views/vote.php';
 
 
+// 3. Définir l'action demandée
+$action = $_GET['action'] ?? 'home';
+$adminFilmController = new AdminFilmController();
+// Pas besoin de new LoginController() ici, il sera instancié dans le bloc 'login'
+
+// 4. LOGIQUE DE ROUTAGE
+
+if ($action === 'home') {
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/home.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+
+// NOUVEAU BLOC : Ajout de la gestion de l'action 'films_list'
+// (Ceci permet de charger la vue des films via le contrôleur frontal)
+} else if ($action === 'films_list') {
+    // Ici, vous pourriez instancier un FilmController pour charger les données
+    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
+    // $filmController = new FilmController();
+    // $data = $filmController->getFilms();
+
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/films.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+
+} else if ($action === 'login' || $action === 'logout') {
+
+    // Le LoginController est instancié ici
+    $loginController = new LoginController();
+    $loginController->handleRequest($action);
+}
 
 
-    </div>
+else if (strpos($action, 'admin_') === 0) {
+    // --- PARTIE ADMINISTRATION ---
 
-    <section>
-        <h1>Nouveau films:</h1>
-    </section>
+    // Le Contrôleur de Sécurité gère la restriction d'accès
+    if ($action === 'admin_list_films') {
+        $adminFilmController->listFilms();
+    } else if ($action === 'admin_add_film' || $action === 'admin_edit_film' || $action === 'admin_handle_film_form') {
+        $adminFilmController->handleFilmForm();
+    } else if ($action === 'admin_delete_film') {
+        $adminFilmController->deleteFilm();
+    } else if ($action === 'admin_dashboard') {
+        SecurityController::restrictAccess();
+        require ROOT_DIR . 'views/layout/header.php';
+        require ROOT_DIR . 'views/admin/dashboard.php';
+        require ROOT_DIR . 'views/layout/footer.php';
+    } else {
+        header("HTTP/1.0 404 Not Found");
+        echo "404 Page d'administration non trouvée.";
+    }
 
-
-    <section class="mf">
-        <h1>Meilleurs films</h1>
-        <div id="slider">
-            <figure>
-                <img src="./image/Ineception.jpg" alt>
-                <img src="./image/idiana.jpeg" alt>
-                <img src="./image/mufa.jpeg" alt>
-                <img src="./image/interstller.jpg" alt>
-                <img src="./image/Vice-versa_2.jpg" alt>
-                <img src="./image/Spider-Man%20Across%20the%20Spider-Verse.jpg" alt>
-                <img src="./image/Super%20Mario%20Bros.jpg" alt>
-                <img src="./image/tenet.jpg" alt>
-                <img src="./image/The%20Batman.jpg" alt>
-                <img src="./image/Les%20Minions%202.jpg" alt>
-                <img src="./image/Parasite.jpg" alt>
-                <img src="./image/Oppenheimer.jpg" alt>
-                <img src="./image/La%20La%20Land.jpg" alt>
-            </figure>
-        </div>
-    </section>
-
-
-
-
-
-
-<?php
-// On inclut le fichier de pied de page (footer)
-require 'footer.php';
+} else {
+    header("HTTP/1.0 404 Not Found");
+    echo "404 Page non trouvée.";
+}
 ?>

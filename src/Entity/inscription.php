@@ -3,9 +3,6 @@
 session_start();
 
 
-// Inclure le fichier de connexion à la BDD
-
-
 include 'bdd.php';
 
 $message_erreur = '';
@@ -107,7 +104,7 @@ include 'header.php';
             </div>
             <br>
             <button type="submit">S'inscrire</button>
-            <p>Déjà un compte ? <a href="connexion.php">Se connecter</a></p>
+            <p>Déjà un compte ? <a href="../../views/connexion.php">Se connecter</a></p>
         </form>
     </main>
 

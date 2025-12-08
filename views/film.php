@@ -1,9 +1,15 @@
+<?php
+// On inclut le fichier d'en-tête (header)
+require 'layout/header.php';;
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Page Film - Exemple</title>
-    <link rel="stylesheet" href="film.css">
+
 </head>
 <body>
 

@@ -8,7 +8,7 @@ body {
 }
 
 .index {
-  background-image: url('./image/cine.jpg');
+  background-image: url('image/cine.jpg');
 }
 
 
@@ -51,7 +51,7 @@ p{
     height: 64px;
     width: 64px;
     margin-top:-0.1%;
-    margin-right: 40%;
+    margin-right: 50%;
 }
 .index nav ul {
     display: flex;

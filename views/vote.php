@@ -1,17 +1,9 @@
 
 <?php
 // On inclut le fichier d'en-tête (header)
-require 'header.php';
+require 'layout/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="vote.css">
-    <title>Vote - StarCiné</title>
-
-</head>
 
 <body>
 
@@ -74,9 +66,9 @@ require 'header.php';
 </script>
 
 </body>
-</html>
+
 
 <?php
     // On inclut le fichier de pied de page (footer)
-    require 'footer.php';
+    require 'layout/footer.php';
     ?>

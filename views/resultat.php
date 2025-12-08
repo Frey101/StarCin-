@@ -1,11 +1,11 @@
 <?php
 // On inclut le fichier d'en-tête (header)
-require 'header.php';
+require 'layout/header.php';
 ?>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="resultat.css">
+    <link rel="stylesheet" href="../public/resultat.css">
     <title>Résultats des Votes - StarCiné</title>
 </head>
 
@@ -76,5 +76,5 @@ require 'header.php';
 </body>
 <?php
 // On inclut le fichier de pied de page (footer)
-require 'footer.php';
+require 'layout/footer.php';
 ?>

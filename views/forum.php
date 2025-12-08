@@ -1,10 +1,10 @@
  <?php
     // On inclut le fichier d'en-tête (header)
-    require 'header.php';
+    require 'layout/header.php';
     ?>
 
 <body>
-<link rel="stylesheet" href="forum.css">
+<link rel="stylesheet" href="../public/forum.css">
 <div id="container">
 
     <!-- LISTE DES CATÉGORIES -->
