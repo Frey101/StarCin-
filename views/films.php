@@ -8,7 +8,7 @@ require 'layout/header.php';;
     <h1 class="page-title">Tous les films</h1>
 
     <div class="films-grid">
-
+ 
 
         <a href="film.php" class="film-card">
             <img src="public/image/Ineception.jpg" alt="Inception">

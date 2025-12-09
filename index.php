@@ -31,7 +31,7 @@ require_once ROOT_DIR . 'src/Entity/User.php';
 require_once ROOT_DIR . 'src/Entity/Film.php';
 require_once ROOT_DIR . 'views/vote.php';
 
-
+ 
 // 3. Définir l'action demandée
 $action = $_GET['action'] ?? 'home';
 $adminFilmController = new AdminFilmController();

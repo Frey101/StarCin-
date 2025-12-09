@@ -1,6 +1,6 @@
  <?php
     // On inclut le fichier d'en-tête (header)
-    require 'layout/header.php';
+    require 'layout/header.php'; 
     ?>
 
 <body>

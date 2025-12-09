@@ -4,7 +4,7 @@ require 'layout/header.php';;
 ?>
 
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">

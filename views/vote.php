@@ -67,7 +67,7 @@ require 'layout/header.php';
 
 </body>
 
-
+ 
 <?php
     // On inclut le fichier de pied de page (footer)
     require 'layout/footer.php';
