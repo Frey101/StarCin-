@@ -1,17 +1,17 @@
 <?php
 $bdd = DBConnection::getInstance()->getPDO();
-// DOIT ÊTRE LA PREMIÈRE INSTRUCTION
 
 $message_erreur = '';
+$email = $_POST['email'] ?? '';
 
-// 2. Traitement du formulaire POST
+// Traitement du formulaire POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = trim($_POST['email'] ?? '');
     $mot_de_passe = $_POST['mdp'] ?? '';
     $confirmation_mdp = $_POST['mdp_confirm'] ?? '';
 
-    // --- Validation des données ---
+    // Validation des données 
     if (empty($email) || empty($mot_de_passe) || empty($confirmation_mdp)) {
         $message_erreur = 'Veuillez remplir tous les champs.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (strlen($mot_de_passe) < 8) {
         $message_erreur = 'Le mot de passe doit contenir au moins 8 caractères.';
     } else {
-        // --- 4. Vérification si l'utilisateur existe déjà ---
+        // Vérification si l'utilisateur existe déjà 
         try {
             $requete_check = $bdd->prepare("SELECT COUNT(id_utilisateur) FROM utilisateur WHERE email = :email");
             $requete_check->bindParam(':email', $email, PDO::PARAM_STR);
@@ -32,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $message_erreur = 'Cette adresse e-mail est déjà utilisée.';
             } else {
 
-                // --- 5. Hachage du mot de passe ---
+                // Hachage du mot de passe 
                 $mot_de_passe_hache = password_hash($mot_de_passe, PASSWORD_DEFAULT);
 
-                // --- 6. Insertion du nouvel utilisateur dans la BDD ---
+                // Insertion du nouvel utilisateur dans la BDD
                 $requete_insert = $bdd->prepare(
                     "INSERT INTO utilisateur (email, mot_de_passe, nom, prenom) VALUES (:email, :mot_de_passe, '', '')"
                 );
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['user_id'] = $bdd->lastInsertId();
                     $_SESSION['email'] = $email;
 
-                    header('Location: vote.php');
+                    header('Location: ' . ROOT_PATH . 'index.php?action=vote_page');
                     exit;
 
                 } else {
@@ -63,6 +63,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
-
