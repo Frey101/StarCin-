@@ -29,34 +29,59 @@ require_once ROOT_DIR . 'src/Controller/LoginController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminFilmController.php';
 require_once ROOT_DIR . 'src/Entity/User.php';
 require_once ROOT_DIR . 'src/Entity/Film.php';
-require_once ROOT_DIR . 'views/vote.php';
 
- 
-// 3. Définir l'action demandée
+
 $action = $_GET['action'] ?? 'home';
 $adminFilmController = new AdminFilmController();
-// Pas besoin de new LoginController() ici, il sera instancié dans le bloc 'login'
 
-// 4. LOGIQUE DE ROUTAGE
 
 if ($action === 'home') {
     require ROOT_DIR . 'views/layout/header.php';
     require ROOT_DIR . 'views/home.php';
     require ROOT_DIR . 'views/layout/footer.php';
 
-// NOUVEAU BLOC : Ajout de la gestion de l'action 'films_list'
-// (Ceci permet de charger la vue des films via le contrôleur frontal)
+    //Ajout de la gestion de l'action 'films_list'
+
 } else if ($action === 'films_list') {
+
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/films.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+
+
+}
+else if ($action === 'vote_page') {
+    // Ici, vous pourriez instancier un FilmController pour charger les données
+    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
+    // $filmController = new FilmController();
+    // $data = $filmController->getFilms();
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/vote.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+}
+
+else if ($action === 'resultat_page') {
     // Ici, vous pourriez instancier un FilmController pour charger les données
     // require_once ROOT_DIR . 'src/Controller/FilmController.php';
     // $filmController = new FilmController();
     // $data = $filmController->getFilms();
 
     require ROOT_DIR . 'views/layout/header.php';
-    require ROOT_DIR . 'views/films.php';
+    require ROOT_DIR . 'views/resultat.php';
     require ROOT_DIR . 'views/layout/footer.php';
+}
 
-} else if ($action === 'login' || $action === 'logout') {
+else if ($action === 'forum_page') {
+    // Ici, vous pourriez instancier un FilmController pour charger les données
+    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
+    // $filmController = new FilmController();
+    // $data = $filmController->getFilms();
+
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/forum.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+}
+ else if ($action === 'login' || $action === 'logout') {
 
     // Le LoginController est instancié ici
     $loginController = new LoginController();

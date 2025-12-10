@@ -1,7 +1,3 @@
-<?php
-// On inclut le fichier d'en-tête (header)
-require 'layout/header.php';
-?>
 
 <head>
     <meta charset="UTF-8">
@@ -61,7 +57,7 @@ require 'layout/header.php';
         <div class="title">1️ Les Oubliés du Lac</div>
         <div class="stats">610 votes<br><span class="percent">51%</span></div>
     </div>
- 
+
     <div class="film">
         <div class="title">2️ Murmures de Pierre</div>
         <div class="stats">410 votes<br><span class="percent">34%</span></div>
@@ -74,7 +70,3 @@ require 'layout/header.php';
 </div>
 
 </body>
-<?php
-// On inclut le fichier de pied de page (footer)
-require 'layout/footer.php';
-?>

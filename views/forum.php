@@ -1,9 +1,4 @@
- <?php
-    // On inclut le fichier d'en-tête (header)
-    require 'layout/header.php'; 
-    ?>
 
-<body>
 <link rel="stylesheet" href="../public/forum.css">
 <div id="container">
 
@@ -150,5 +145,5 @@
     }
 </script>
 
-</body>
+
 
