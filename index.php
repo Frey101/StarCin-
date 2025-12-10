@@ -62,7 +62,12 @@ if ($action === 'home') {
     // Le LoginController est instancié ici
     $loginController = new LoginController();
     $loginController->handleRequest($action);
-}else if ($action === 'inscription') {
+} else if ($action === 'inscription') {
+    // Si le formulaire a été soumis, inclure la logique d'inscription
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        require_once ROOT_DIR . 'src/Model/inscriptionModel.php';
+    }
+
     require ROOT_DIR . 'views/layout/header.php';
     require ROOT_DIR . 'views/inscription.php';
     require ROOT_DIR . 'views/layout/footer.php';

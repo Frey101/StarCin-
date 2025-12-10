@@ -12,7 +12,7 @@
         }
         ?>
 
-        <form action="inscription.php" method="POST">
+        <form action="<?= ROOT_PATH ?>index.php?action=inscription" method="POST">
             <div>
                 <label for="email">Adresse e-mail :</label><br>
                 <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? '') ?>" required>
@@ -29,6 +29,6 @@
             </div>
             <br>
             <button type="submit">S'inscrire</button>
-            <p>Déjà un compte ? <a href="../../views/connexion.php">Se connecter</a></p>
+            <a href="<?= ROOT_PATH ?>index.php?action=login">Se connecter</a>
         </form>
     </main>

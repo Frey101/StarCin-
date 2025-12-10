@@ -1,9 +1,6 @@
 <?php
+$bdd = DBConnection::getInstance()->getPDO();
 // DOIT ÊTRE LA PREMIÈRE INSTRUCTION
-session_start();
-
-
-require 'Controller/Database/DBConnection.php';
 
 $message_erreur = '';
 
