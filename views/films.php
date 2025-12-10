@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 <?php
 // On inclut le fichier d'en-tête (header)
 require 'layout/header.php';;
 ?>
 
 
+=======
+>>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
 
     <h1 class="page-title">Tous les films</h1>
 
     <div class="films-grid">
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
 
         <a href="film.php" class="film-card">
             <img src="public/image/Ineception.jpg" alt="Inception">
@@ -103,7 +110,10 @@ require 'layout/header.php';;
         </a>
         <!-- Ajoute autant de films que tu veux -->
     </div>
+<<<<<<< HEAD
 <?php
 // On inclut le fichier de pied de page (footer)
 require 'layout/footer.php';;
 ?>
+=======
+>>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9

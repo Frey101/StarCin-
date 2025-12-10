@@ -1,7 +1,9 @@
 <?php
+
 // views/layout/header.php
 
 // Note : Assurez-vous que session_start() est appelé dans index.php et que ROOT_PATH est défini.
+
 
 $is_logged_in = isset($_SESSION['utilisateur_connecte']) && $_SESSION['utilisateur_connecte'] === true;
 $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
