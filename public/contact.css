@@ -1,0 +1,28 @@
+cont{
+
+}
+
+
+h2{
+    color:white;
+    font-size: 30px;
+    margin: 2% 0% 2% 1%;
+}
+
+section {
+    display: flex;
+    width: 90%;
+    height: 646px;
+    background-color: mediumvioletred;
+    margin: 17% 6% 1% 1%;
+    padding: 1% 5% 0% 5%;
+}
+
+
+button{
+    background-color: #000000;
+    color: white;
+    border-radius: 12px;
+    padding: 5px;
+    text-decoration: none;
+}

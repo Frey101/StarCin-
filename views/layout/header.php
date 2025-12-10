@@ -12,6 +12,7 @@ $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/vote.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/resultat.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/forum.css" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/contact.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -34,6 +35,7 @@ $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
                 <li><a href="<?php echo ROOT_PATH; ?>index.php?action=vote_page">Vote</a></li>
                 <li><a href="<?php echo ROOT_PATH; ?>index.php?action=resultat_page">Resultat</a></li>
                 <li><a href="<?php echo ROOT_PATH; ?>index.php?action=forum_page">Forum</a></li>
+                <li><a href="<?php echo ROOT_PATH; ?>index.php?action=contact_page">Contact</a></li>
 
                 <?php if ($is_admin): ?>
                     <li style="font-weight: bold;"><a href="<?php echo ROOT_PATH; ?>index.php?action=admin_dashboard">ADMIN</a></li>
@@ -41,9 +43,7 @@ $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
 
                 <li><a href="<?php echo ROOT_PATH; ?>index.php?action=logout">Déconnexion</a></li>
 
-                <?php if (isset($_SESSION['email'])): ?>
-                    <li><span style="color: white; padding: 0 10px;">Bonjour, <?= htmlspecialchars($_SESSION['email']) ?></span></li>
-                <?php endif; ?>
+
 
             <?php else: ?>
 

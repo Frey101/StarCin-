@@ -81,6 +81,25 @@ else if ($action === 'forum_page') {
     require ROOT_DIR . 'views/forum.php';
     require ROOT_DIR . 'views/layout/footer.php';
 }
+
+else if ($action === 'contact_page') {
+    // Ici, vous pourriez instancier un FilmController pour charger les données
+    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
+    // $filmController = new FilmController();
+    // $data = $filmController->getFilms();
+
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/contact.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+}
+
+else if ($action === 'inscription') {
+
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/inscription.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+}
+
  else if ($action === 'login' || $action === 'logout') {
 
     // Le LoginController est instancié ici

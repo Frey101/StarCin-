@@ -1,5 +1,3 @@
-
-
 body {
   background-size: cover;
   background-position: center;
@@ -9,6 +7,7 @@ body {
 
 .index {
   background-image: url('image/cine.jpg');
+  background-size: cover;
 }
 
 
@@ -187,12 +186,12 @@ div#slider figure {
 }
 
 footer{
-   width: 101%;
-   background-color: darkred;
-   color: aliceblue;
-   height: 26px;
-   text-align: center;
-   margin: 10% 0px 0px -8px;
+    width: 105.86%;
+    background-color: darkred;
+    color: aliceblue;
+    height: 56px;
+    text-align: center;
+    margin: 6% 0% -4% -38px;
 }
 
 

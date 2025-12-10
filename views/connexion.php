@@ -22,7 +22,7 @@ include 'layout/header.php';;
                 <label for="mdp">Mot de passe :</label><br>
                 <input type="password" id="mdp" name="mdp" required>
             </div>
-            <br>
+
             <button type="submit">Se connecter</button>
         </form>
     </main>
