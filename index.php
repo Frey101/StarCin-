@@ -83,10 +83,6 @@ else if ($action === 'forum_page') {
 }
 
 else if ($action === 'contact_page') {
-    // Ici, vous pourriez instancier un FilmController pour charger les données
-    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
-    // $filmController = new FilmController();
-    // $data = $filmController->getFilms();
 
     require ROOT_DIR . 'views/layout/header.php';
     require ROOT_DIR . 'views/contact.php';
