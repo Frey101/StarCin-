@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<?php
-// On inclut le fichier d'en-tête (header)
-require 'layout/header.php';
-?>
-=======
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
+
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +10,7 @@ require 'layout/header.php';
 
 <h1>Résultats du Vote</h1>
 
-<!-- Année actuelle -->
+
 <div class="year-block">
     <h2>📅 Résultats 2025</h2>
 
@@ -64,11 +58,7 @@ require 'layout/header.php';
         <div class="title">1️ Les Oubliés du Lac</div>
         <div class="stats">610 votes<br><span class="percent">51%</span></div>
     </div>
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
     <div class="film">
         <div class="title">2️ Murmures de Pierre</div>
         <div class="stats">410 votes<br><span class="percent">34%</span></div>
@@ -81,10 +71,3 @@ require 'layout/header.php';
 </div>
 
 </body>
-<<<<<<< HEAD
-<?php
-// On inclut le fichier de pied de page (footer)
-require 'layout/footer.php';
-?>
-=======
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9

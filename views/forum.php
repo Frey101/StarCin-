@@ -1,14 +1,7 @@
-<<<<<<< HEAD
- <?php
-    // On inclut le fichier d'en-tête (header)
-    require 'layout/header.php'; 
-    ?>
+
 
 <body>
-=======
 
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
-<link rel="stylesheet" href="../public/forum.css">
 <div id="container">
 
     <!-- LISTE DES CATÉGORIES -->
@@ -154,9 +147,7 @@
     }
 </script>
 
-<<<<<<< HEAD
-</body>
-=======
 
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
+</body>
+
 

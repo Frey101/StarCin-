@@ -1,15 +1,5 @@
-
-<<<<<<< HEAD
-<?php
-// On inclut le fichier d'en-tête (header)
-require 'layout/header.php';
-?>
-
-
 <body>
 
-=======
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
 <h1>Vote : Choisissez votre film préféré 🎬</h1>
 
 <div class="container">
@@ -68,14 +58,5 @@ require 'layout/header.php';
     });
 </script>
 
-<<<<<<< HEAD
 </body>
 
- 
-<?php
-    // On inclut le fichier de pied de page (footer)
-    require 'layout/footer.php';
-    ?>
-=======
-
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9

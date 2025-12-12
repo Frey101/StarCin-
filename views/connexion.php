@@ -1,9 +1,4 @@
-
-<?php
-include 'layout/header.php';;
-?>
-
-    <main >
+<main >
         <h2>Connexion à StarCiné</h2>
 
         <?php

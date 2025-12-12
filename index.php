@@ -1,28 +1,23 @@
 <?php
-// index.php
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// 1. DÉFINITION DES CHEMINS GLOBAUX
-// L'ordre est important : définissez les constantes une seule fois, au début.
 
-// ROOT_DIR : Chemin ABSOLU du système de fichiers pour les inclusions (require/include)
-// __DIR__ est le dossier où se trouve index.php.
+
+// ROOT_DIR : Chemin ABSOLU  pour les inclusions (require/include)
+// __DIR__ est le dossier où se trouve index.php
 if (!defined('ROOT_DIR')) {
     define('ROOT_DIR', __DIR__ . '/');
 }
 
-// ROOT_PATH : Chemin URL (relatif au domaine) pour les liens et les redirections header('Location: ...')
+// ROOT_PATH : Chemin URL pour les liens et les redirections header
 if (!defined('ROOT_PATH')) {
-    // IMPORTANT : Utilisez le chemin du sous-dossier si l'application n'est pas à la racine du domaine.
-    // Votre chemin est /StarCin--main/
     define('ROOT_PATH', '/StarCin--main/');
 }
 
 
-// 2. Inclusion de TOUTES les classes nécessaires (utilise ROOT_DIR)
+// Inclusion des classes nécessaires
 require_once ROOT_DIR . 'src/Database/DBConnection.php';
 require_once ROOT_DIR . 'src/Controller/SecurityController.php';
 require_once ROOT_DIR . 'src/Controller/LoginController.php';
@@ -61,10 +56,6 @@ else if ($action === 'vote_page') {
 }
 
 else if ($action === 'resultat_page') {
-    // Ici, vous pourriez instancier un FilmController pour charger les données
-    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
-    // $filmController = new FilmController();
-    // $data = $filmController->getFilms();
 
     require ROOT_DIR . 'views/layout/header.php';
     require ROOT_DIR . 'views/resultat.php';
@@ -72,10 +63,6 @@ else if ($action === 'resultat_page') {
 }
 
 else if ($action === 'forum_page') {
-    // Ici, vous pourriez instancier un FilmController pour charger les données
-    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
-    // $filmController = new FilmController();
-    // $data = $filmController->getFilms();
 
     require ROOT_DIR . 'views/layout/header.php';
     require ROOT_DIR . 'views/forum.php';
@@ -105,7 +92,7 @@ else if ($action === 'inscription') {
 
 
 else if (strpos($action, 'admin_') === 0) {
-    // --- PARTIE ADMINISTRATION ---
+    //  PARTIE ADMINISTRATION
 
     // Le Contrôleur de Sécurité gère la restriction d'accès
     if ($action === 'admin_list_films') {

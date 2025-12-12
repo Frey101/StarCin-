@@ -1,8 +1,5 @@
 
-    <main style="padding: 20px;">
-
-
-
+    <main>
         <h2>Créer un compte StarCiné</h2>
 
         <?php

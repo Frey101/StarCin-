@@ -1,5 +1,5 @@
 
-<section>
+<div class="contact">
     <div class ="form-container">
         <h2>Contactez-nous</h2>
         <form >
@@ -31,7 +31,7 @@
 
         </form>
     </div>
-</section>
+</div>
 
 
 

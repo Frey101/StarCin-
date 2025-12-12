@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<?php
-// On inclut le fichier d'en-tête (header)
-require 'layout/header.php';;
-?>
 
-
-<!DOCTYPE html> 
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Page Film - Exemple</title>
-
-</head>
 <body>
-=======
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9
+
 
 <div class="film">
     <div class="film-container">
@@ -96,9 +82,4 @@ require 'layout/header.php';;
     </div>
 </div>
 
-<<<<<<< HEAD
 </body>
-</html>
-=======
-
->>>>>>> df92064575b7562efa5d2c4877d1aaf97df358e9

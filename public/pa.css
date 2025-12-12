@@ -46,11 +46,11 @@ p{
 }
 .index img{
 
-    margin-right: 50%;
-    height: 64px;
+
     width: 64px;
-    margin-top:-0.1%;
-    margin-right: 50%;
+    margin-top: -0.5%;
+    margin-right: 21%;
+
 }
 .index nav ul {
     display: flex;
@@ -186,12 +186,15 @@ div#slider figure {
 }
 
 footer{
-    width: 105.86%;
+    width: 140.6%;
     background-color: darkred;
     color: aliceblue;
     height: 56px;
     text-align: center;
-    margin: 6% 0% -4% -38px;
+    margin: 6% 0% -4% -38%;
+
+
+
 }
 
 

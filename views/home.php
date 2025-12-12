@@ -1,7 +1,3 @@
-
- 
-
-
 <div class="acc">
     <h1>StarCiné</h1>
 
