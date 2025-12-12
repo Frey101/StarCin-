@@ -1,42 +1,59 @@
 <?php
-// Fichier : src/Model/FilmModel.php
+// src/Model/FilmModel.php
 
-// Inclure les dépendances (le chemin doit être ajusté si nécessaire)
 require_once __DIR__ . '/../Database/DBConnection.php';
 require_once __DIR__ . '/../Entity/Film.php';
 
-class FilmModel {
-    private $pdo;
+class FilmModel
+{
+    private PDO $pdo;
 
-    public function __construct() {
-        // Initialisation de la connexion PDO
+    public function __construct()
+    {
         $this->pdo = DBConnection::getInstance()->getPDO();
     }
 
     /**
-     * Insère un nouveau film ou met à jour un film existant (CREATE ou UPDATE).
-     * @param Film $film L'objet Film à enregistrer.
-     * @return bool Vrai si l'opération a réussi, Faux sinon.
-     */
-    public function save(Film $film): bool {
 
+     * CREATE ou UPDATE un film
+     */
+    public function save(Film $film): bool
+    {
         if ($film->getIdFilm() === null) {
-            // C'est un NOUVEAU film (INSERT)
-            $sql = "INSERT INTO film (title, director, release_year, synopsis) 
-                    VALUES (:title, :director, :release_year, :synopsis)";
+            // INSERT
+            $sql = "
+                INSERT INTO film 
+                (titre, synopsis, duree, bandeannonce, datediffusion, categorie, annee)
+                VALUES 
+                (:titre, :synopsis, :duree, :bandeannonce, :datediffusion, :categorie, :annee)
+            ";
         } else {
-            // C'est une MODIFICATION (UPDATE)
-            $sql = "UPDATE film SET title = :title, director = :director, release_year = :release_year, synopsis = :synopsis 
-                    WHERE id_film = :id_film";
+            // UPDATE
+            $sql = "
+                UPDATE film SET
+                    titre = :titre,
+                    synopsis = :synopsis,
+                    duree = :duree,
+                    bandeannonce = :bandeannonce,
+                    datediffusion = :datediffusion,
+                    categorie = :categorie,
+                    annee = :annee
+                WHERE id_film = :id_film
+            ";
         }
 
         $stmt = $this->pdo->prepare($sql);
 
         $params = [
-            ':title' => $film->getTitle(),
-            ':director' => $film->getDirector(),
-            ':release_year' => $film->getReleaseYear(),
-            ':synopsis' => $film->getSynopsis()
+
+            ':titre'          => $film->getTitre(),
+            ':synopsis'       => $film->getSynopsis(),
+            ':duree'          => $film->getDuree(),
+            ':bandeannonce'   => $film->getBandeAnnonce(),
+            ':datediffusion'  => $film->getDateDiffusion(),
+            ':categorie'      => $film->getCategorie(),
+            ':annee'          => $film->getAnnee(),
+
         ];
 
         if ($film->getIdFilm() !== null) {
@@ -47,14 +64,17 @@ class FilmModel {
     }
 
     /**
-     * Récupère TOUS les films de la DB et retourne un tableau d'objets Film.
-     * @return array<Film>
+
+     * Retourne tous les films
+     * @return Film[]
      */
-    public function findAll(): array {
-        $stmt = $this->pdo->query("SELECT * FROM film ORDER BY title ASC");
+    public function findAll(): array
+    {
+        $stmt = $this->pdo->query("SELECT * FROM film ORDER BY titre ASC");
         $films = [];
 
-        while ($data = $stmt->fetch()) {
+        while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
             $films[] = $this->hydrateFilm($data);
         }
 
@@ -62,45 +82,47 @@ class FilmModel {
     }
 
     /**
-     * Récupère un film par son ID et retourne un objet Film.
-     * @param int $id
-     * @return Film|null
+
+     * Retourne un film par ID
      */
-    public function find(int $id): ?Film {
+    public function find(int $id): ?Film
+    {
         $stmt = $this->pdo->prepare("SELECT * FROM film WHERE id_film = :id");
         $stmt->execute([':id' => $id]);
-        $data = $stmt->fetch();
 
-        if (!$data) {
-            return null;
-        }
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        return $this->hydrateFilm($data);
+        return $data ? $this->hydrateFilm($data) : null;
     }
 
     /**
-     * Supprime un film par son ID.
-     * @param int $id
-     * @return bool
+     * Supprime un film
      */
-    public function delete(int $id): bool {
+    public function delete(int $id): bool
+    {
+
         $stmt = $this->pdo->prepare("DELETE FROM film WHERE id_film = :id");
         return $stmt->execute([':id' => $id]);
     }
 
     /**
-     * Méthode privée pour créer un objet Film à partir des données DB (Hydratation).
-     * @param array $data Les données du film issues de la base de données.
-     * @return Film L'objet film hydraté.
+
+     * Hydratation Film
      */
-    private function hydrateFilm(array $data): Film {
+    private function hydrateFilm(array $data): Film
+    {
         $film = new Film();
-        $film->setIdFilm((int)$data['id_film']);
-        $film->setTitle($data['title']);
-        $film->setDirector($data['director']);
-        $film->setReleaseYear((int)$data['release_year']);
+
+        $film->setIdFilm((int) $data['id_film']);
+        $film->setTitre($data['titre']);
         $film->setSynopsis($data['synopsis']);
-        // Ajouter ici les autres propriétés
+        $film->setDuree((int) $data['duree']);
+        $film->setBandeAnnonce($data['bandeannonce']);
+        $film->setDateDiffusion($data['datediffusion']);
+        $film->setCategorie($data['categorie']);
+        $film->setAnnee($data['annee'] !== null ? (int)$data['annee'] : null);
+
         return $film;
     }
 }
+

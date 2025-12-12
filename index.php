@@ -26,13 +26,19 @@ if (!defined('ROOT_PATH')) {
 require_once ROOT_DIR . 'src/Database/DBConnection.php';
 require_once ROOT_DIR . 'src/Controller/SecurityController.php';
 require_once ROOT_DIR . 'src/Controller/LoginController.php';
-require_once ROOT_DIR . 'src/Controller/Admin/AdminFilmController.php';
+require_once ROOT_DIR . 'src/Controller/Admin/AdminController.php';
 require_once ROOT_DIR . 'src/Entity/User.php';
 require_once ROOT_DIR . 'src/Entity/Film.php';
 
 
 $action = $_GET['action'] ?? 'home';
-$adminFilmController = new AdminFilmController();
+
+$adminFilmController = null;
+
+if (strpos($action, 'admin_') === 0) {
+    require_once ROOT_DIR . 'src/Controller/Admin/AdminController.php';
+    $adminFilmController = new AdminController();
+}
 
 
 if ($action === 'home') {

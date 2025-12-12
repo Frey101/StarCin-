@@ -1,26 +1,99 @@
 <?php
-//// src/Entity/Film.php
-//
-//class Film {
-//    private ?int $id_film = null;
-//    private string $title;
-//    private string $director;
-//    private ?int $release_year = null;
-//    private ?string $synopsis = null;
-//    // Ajoutez toute autre propriété nécessaire (ex: duration, poster_url)
-//
-//    // --- GETTERS ---
-//    public function getIdFilm(): ?int { return $this->id_film; }
-//    public function getTitle(): string { return $this->title; }
-//    public function getDirector(): string { return $this->director; }
-//    public function getReleaseYear(): ?int { return $this->release_year; }
-//    public function getSynopsis(): ?string { return $this->synopsis; }
-//
-//    // --- SETTERS ---
-//    public function setIdFilm(int $id): void { $this->id_film = $id; }
-//    public function setTitle(string $title): void { $this->title = $title; }
-//    public function setDirector(string $director): void { $this->director = $director; }
-//    public function setReleaseYear(int $year): void { $this->release_year = $year; }
-//    public function setSynopsis(string $synopsis): void { $this->synopsis = $synopsis; }
-//}
-//?>
+
+
+class Film
+{
+    private ?int $id_film = null;
+    private string $titre;
+    private string $synopsis;
+    private int $duree;
+    private ?string $bandeannonce = null;
+    private ?string $datediffusion = null; // format Y-m-d
+    private ?string $categorie = null;
+    private ?int $annee = null;
+
+    /* ===== GETTERS ===== */
+
+    public function getIdFilm(): ?int
+    {
+        return $this->id_film;
+    }
+
+    public function getTitre(): string
+    {
+        return $this->titre;
+    }
+
+    public function getSynopsis(): string
+    {
+        return $this->synopsis;
+    }
+
+    public function getDuree(): int
+    {
+        return $this->duree;
+    }
+
+    public function getBandeAnnonce(): ?string
+    {
+        return $this->bandeannonce;
+    }
+
+    public function getDateDiffusion(): ?string
+    {
+        return $this->datediffusion;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function getAnnee(): ?int
+    {
+        return $this->annee;
+    }
+
+    /* ===== SETTERS ===== */
+
+    public function setIdFilm(int $id): void
+    {
+        $this->id_film = $id;
+    }
+
+    public function setTitre(string $titre): void
+    {
+        $this->titre = $titre;
+    }
+
+    public function setSynopsis(string $synopsis): void
+    {
+        $this->synopsis = $synopsis;
+    }
+
+    public function setDuree(int $duree): void
+    {
+        $this->duree = $duree;
+    }
+
+    public function setBandeAnnonce(?string $url): void
+    {
+        $this->bandeannonce = $url;
+    }
+
+    public function setDateDiffusion(?string $date): void
+    {
+        $this->datediffusion = $date;
+    }
+
+    public function setCategorie(?string $categorie): void
+    {
+        $this->categorie = $categorie;
+    }
+
+    public function setAnnee(?int $annee): void
+    {
+        $this->annee = $annee;
+    }
+}
+
