@@ -10,6 +10,17 @@
         ?>
 
         <form action="<?= ROOT_PATH ?>index.php?action=inscription" method="POST">
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+            <div>
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <br>
+            <div>
+                <label for="prenom">Prénom :</label><br>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <br>
             <div>
                 <label for="email">Adresse e-mail :</label><br>
                 <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? '') ?>" required>

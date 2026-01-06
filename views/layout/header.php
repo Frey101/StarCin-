@@ -2,6 +2,11 @@
 
 $is_logged_in = isset($_SESSION['utilisateur_connecte']) && $_SESSION['utilisateur_connecte'] === true;
 $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
+
+// CSRF token
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
