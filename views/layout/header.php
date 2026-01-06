@@ -19,6 +19,9 @@ if (!isset($_SESSION['csrf_token'])) {
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/forum.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/contact.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/connexion.css" />
+    <?php if (strpos($_GET['action'] ?? '', 'admin') === 0): ?>
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/admin.css" />
+    <?php endif; ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

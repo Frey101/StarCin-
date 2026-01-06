@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin - Tableau de bord</title>
-    <link rel="stylesheet" href="administrateur.css">
-</head>
-<body>
+<?php require ROOT_DIR . 'views/layout/header.php'; ?>
 
 <div class="admin-container">
 
@@ -163,6 +156,3 @@
 
     </main>
 </div>
-
-</body>
-</html>
