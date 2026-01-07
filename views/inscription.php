@@ -37,6 +37,11 @@
             </div>
             <br>
             <button type="submit">S'inscrire</button>
-            <a href="<?= ROOT_PATH ?>index.php?action=login">Se connecter</a>
+            <div class="connex">
+            <p>Deja un compte ? </p>
+                <button><a href="<?= ROOT_PATH ?>index.php?action=login">Se connecter</a></button>
+            </div>
+
+
         </form>
     </main>
