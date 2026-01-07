@@ -1,6 +1,14 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/vote.css">
+    <title>Votes</title>
+</head>
+
+
+
 <body>
 
-<h1>Vote : Choisissez votre film préféré 🎬</h1>
+<h1>Vote : Choisissez votre film préféré ! </h1>
 
 <div class="container">
 

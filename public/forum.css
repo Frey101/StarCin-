@@ -6,10 +6,10 @@
 }
 
 .category-list, .topic-list, .messages {
-    background: white;
+    background: #00000075;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgb(255, 0, 0);
+    box-shadow: 1px 0px 20px 7px rgb(255, 0, 0);
     margin-bottom: 20px;
 }
 
@@ -29,7 +29,7 @@ h2{
 }
 
 .category:hover {
-    background: #ffffff;
+    background: #ffbb50;
 }
 
 .topic {

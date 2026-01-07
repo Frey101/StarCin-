@@ -39,11 +39,7 @@ body {
     color: #000000;
 }
 
-.index nav img {
-    width: 64px;
-    margin-top: -0.5%;
-    margin-right: 21%;
-}
+
 
 .admin-container {
     display: flex;

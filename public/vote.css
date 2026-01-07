@@ -1,28 +1,27 @@
-body {
 
-    background: #f0f2f5;
-    padding: 40px;
-}
 
 h1 {
     text-align: center;
     margin-bottom: 25px;
+    margin-top: 11%;
 }
 
 .index nav ul{
 
     margin-top: -3.5%;
-
     margin-left: -4%;
 }
 
 .container {
     width: 60%;
-    margin: auto;
-    background: white;
+    background: #000000;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 20px 11px #8b0000;
+    margin-top: 12%;
+    margin:auto;
+    margin-bottom: 15.55%;
+
 }
 
 .film {
@@ -40,8 +39,9 @@ h1 {
 }
 
 .film.selected {
-    border-color: #0078ff;
-    background: #e5f0ff;
+    border-color: #f2d04f;
+    background: #ffd28a;;
+
 }
 
 .film-title {
@@ -63,7 +63,7 @@ h1 {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: #0078ff;
+    background: #f5b041;
     color: white;
     transition: 0.25s;
     opacity: 0.5;

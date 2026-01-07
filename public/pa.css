@@ -45,11 +45,9 @@ p{
    margin-right: 5%;
 }
 .index img{
-
-
-    width: 64px;
-    margin-top: -0.5%;
-    margin-right: 21%;
+    height: 120%;
+    margin-top: 0.1%;
+    margin-right: 35%;
 
 }
 .index nav ul {
@@ -186,17 +184,31 @@ div#slider figure {
 }
 
 footer{
-    width: 140.6%;
+    width: 138%;
     background-color: darkred;
     color: aliceblue;
     height: 56px;
     text-align: center;
     margin: 6% 0% -4% -38%;
 
-
-
 }
 
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a{
+   color: aliceblue;
+    text-decoration: none;
+}
+.footer p{
+
+    font-size: 15px;
+    padding-left: 12%;
+}
 
 /*   Page Films   */
 .films nav li {
@@ -245,6 +257,9 @@ footer{
     gap: 25px;
     max-width: 1200px;
     margin: auto;
+    background-color: #ffffff57;
+    padding: 3%;
+    border-radius: 2%;
 }
 
 .film-card {

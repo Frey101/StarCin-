@@ -12,7 +12,7 @@
 
 
 <div class="year-block">
-    <h2>📅 Résultats 2025</h2>
+    <h2> Résultats 2025</h2>
 
     <div class="film">
         <div class="title">1️ Lumière d’Hiver</div>
@@ -32,7 +32,7 @@
 
 <!-- Archives 2024 -->
 <div class="year-block">
-    <h2>📁 Résultats 2024</h2>
+    <h2>Résultats 2024</h2>
 
     <div class="film">
         <div class="title">1️ Horizon Bleu</div>
@@ -52,7 +52,7 @@
 
 <!-- Archives 2023 -->
 <div class="year-block">
-    <h2>📁 Résultats 2023</h2>
+    <h2>Résultats 2023</h2>
 
     <div class="film">
         <div class="title">1️ Les Oubliés du Lac</div>
