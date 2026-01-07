@@ -1,0 +1,222 @@
+/* Admin Dashboard Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Override header for admin */
+.index nav ul {
+    margin-left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    margin-top: 0%;
+    background: #aa0909;
+    height: 9%;
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.index nav li {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: -2%;
+    margin-right: 5%;
+}
+
+.index nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+.index nav li a:hover {
+    color: #000000;
+}
+
+.index nav img {
+    height: 65px;
+    margin-top: 0%;
+    margin-right: 7%;
+}
+
+.admin-container {
+    display: flex;
+    min-height: calc(100vh - 100px); /* Adjust for header */
+    padding-top: 80px; /* Space for fixed header */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #ecf0f1;
+}
+
+.sidebar a {
+    display: block;
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #34495e;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.sidebar .logout {
+    margin-top: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sidebar .logout:hover {
+    background-color: #c0392b;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 0;
+}
+
+.content h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Stats Cards */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #3498db;
+}
+
+.card p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Sections */
+.admin-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.admin-section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Buttons */
+.btn-add, .btn-edit, .btn-delete {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-add {
+    background-color: #2ecc71;
+    padding: 1px 1px;
+    font-size: 14px;
+}
+
+.btn-add:hover {
+    background-color: #27ae60;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .stats-cards {
+        flex-direction: column;
+    }
+}
