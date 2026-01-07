@@ -58,8 +58,7 @@ textarea, input{
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: white;
-
+    color: #ffffff;
 }
 
 /* Styles pour les champs de saisie (Inputs et Textarea) */

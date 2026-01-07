@@ -9,11 +9,9 @@ class AdminController
 
     public function __construct()
     {
-        session_start();
-
         // Sécurité : accès admin uniquement
-        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-            header('Location: /login.php');
+        if (!isset($_SESSION['utilisateur_connecte']) || ($_SESSION['user_role'] ?? 'user') !== 'admin') {
+            header('Location: ' . ROOT_PATH . 'index.php?action=login&error=unauthorized');
             exit;
         }
 

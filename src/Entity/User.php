@@ -6,6 +6,7 @@ class User
     private $id_utilisateur;
     private $email;
     private $mot_de_passe; // Le mot de passe haché
+    private $role;
 
     // Getters
     public function getIdUtilisateur()
@@ -23,6 +24,10 @@ class User
         return $this->mot_de_passe;
     }
 
+    public function getRole()
+    {
+        return $this->role;
+    }
 
     public function setIdUtilisateur(int $id)
     {
@@ -41,10 +46,7 @@ class User
 
     public function setRole($role)
     {
-    }
-
-    public function getRole()
-    {
+        $this->role = $role;
     }
 }
 

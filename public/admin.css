@@ -12,9 +12,9 @@ body {
     width: 100%;
     z-index: 1000;
     position: fixed;
-    margin-top: 0%;
+    top: 5%;
     background: #aa0909;
-    height: 9%;
+    height: 7%;
     display: flex;
     list-style-type: none;
     padding: 10px;
@@ -40,9 +40,9 @@ body {
 }
 
 .index nav img {
-    height: 65px;
-    margin-top: 0%;
-    margin-right: 7%;
+    width: 64px;
+    margin-top: -0.5%;
+    margin-right: 21%;
 }
 
 .admin-container {

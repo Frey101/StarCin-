@@ -29,23 +29,28 @@ class LoginController {
 
         // 2. GESTION DE LA CONNEXION (LOGIN - Soumission du Formulaire POST)
         if ($action === 'login' && $_SERVER["REQUEST_METHOD"] === "POST") {
-            $email = trim($_POST['email'] ?? '');
-            $mdp = $_POST['mdp'] ?? '';
-
-            if (!empty($email) && !empty($mdp)) {
-                $result = $this->processLogin($email, $mdp);
-
-                // Si la connexion réussit, le Modèle retourne une URL de redirection
-                if (isset($result['redirect'])) {
-                    header('Location: ' . $result['redirect']);
-                    exit;
-                }
-
-                // Si la connexion échoue, le message est stocké pour l'affichage
-                $message_erreur = $result['message'];
+            // CSRF check
+            if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+                $message_erreur = 'Token CSRF invalide.';
             } else {
-                $message_erreur = 'Veuillez remplir tous les champs.';
-            }
+                $email = trim($_POST['email'] ?? '');
+                $mdp = $_POST['mdp'] ?? '';
+
+                if (!empty($email) && !empty($mdp)) {
+                    $result = $this->processLogin($email, $mdp);
+
+                    // Si la connexion réussit, le Modèle retourne une URL de redirection
+                    if (isset($result['redirect'])) {
+                        header('Location: ' . $result['redirect']);
+                        exit;
+                    }
+
+                    // Si la connexion échoue, le message est stocké pour l'affichage
+                    $message_erreur = $result['message'];
+                } else {
+                    $message_erreur = 'Veuillez remplir tous les champs.';
+                }
+        }
         }
 
         // 3. AFFICHAGE DE LA VUE (Si c'est un GET ou si le POST a échoué)

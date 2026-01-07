@@ -2,6 +2,11 @@
 
 $is_logged_in = isset($_SESSION['utilisateur_connecte']) && $_SESSION['utilisateur_connecte'] === true;
 $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
+
+// CSRF token
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,7 +18,12 @@ $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/resultat.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/forum.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/contact.css" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/inscription.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/connexion.css" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/admin.css" />
+    <?php if (strpos($_GET['action'] ?? '', 'admin') === 0): ?>
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/admin.css" />
+    <?php endif; ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

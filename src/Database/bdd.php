@@ -9,11 +9,11 @@ class DBConnection {
     // L'objet PDO qui contiendra la connexion active
     private $pdo;
 
-    // --- Paramètres de Connexion (À MODIFIER !) ---
+    // Paramètres de Connexion (À MODIFIER !) 
     private $host = 'localhost';
     private $db   = 'cinema'; 
-    private $user = 'alys';        
-    private $pass = '1234';         
+    private $user = 'root';        
+    private $pass = '';         
 
     private $charset = 'utf8mb4';
 

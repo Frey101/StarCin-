@@ -11,8 +11,8 @@ class DBConnection {
     // --- Paramètres de Connexion (À MODIFIER !) ---
     private $host = 'localhost';
     private $db   = 'cinema';
-    private $user = 'alys';
-    private $pass = '1234';
+    private $user = 'root';
+    private $pass = '';
     private $charset = 'utf8mb4';
 
     /**

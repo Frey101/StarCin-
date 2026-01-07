@@ -8,6 +8,7 @@
         ?>
 
         <form action="index.php?action=login" method="POST">
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <div>
                 <label for="email">Adresse e-mail :</label><br>
                 <input type="email" id="email" name="email" required>
