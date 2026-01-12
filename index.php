@@ -3,8 +3,6 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-
-
 // ROOT_DIR : Chemin ABSOLU  pour les inclusions (require/include)
 // __DIR__ est le dossier où se trouve index.php
 if (!defined('ROOT_DIR')) {
@@ -27,6 +25,7 @@ require_once ROOT_DIR . 'src/Controller/Admin/AdminFilmController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminDashboardController.php';
 require_once ROOT_DIR . 'src/Entity/User.php';
 require_once ROOT_DIR . 'src/Entity/Film.php';
+
 
 
 $action = $_GET['action'] ?? 'home';
@@ -92,11 +91,32 @@ else if ($action === 'contact_page') {
     require ROOT_DIR . 'views/layout/footer.php';
 }
 
+
+else if ($action === 'mentions') {
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/mentionsleg.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+
+    }
+
+
+else if ($action === 'condition') {
+
+    require ROOT_DIR . 'views/layout/header.php';
+    require ROOT_DIR . 'views/cgu.php';
+    require ROOT_DIR . 'views/layout/footer.php';
+
+}
+
+
+
 else if ($action === 'inscription') {
 
     $inscriptionController = new InscriptionController();
     $inscriptionController->handleRequest();
 }
+
+
 
  else if ($action === 'login' || $action === 'logout') {
 
@@ -123,6 +143,7 @@ else if (strpos($action, 'admin_') === 0) {
         header("HTTP/1.0 404 Not Found");
         echo "404 Page d'administration non trouvée.";
     }
+
 
 } else {
     header("HTTP/1.0 404 Not Found");

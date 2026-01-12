@@ -207,7 +207,9 @@ footer{
 .footer p{
 
     font-size: 15px;
-    padding-left: 12%;
+    margin-left: 14%;
+    margin-right: -8%;
+
 }
 
 /*   Page Films   */
@@ -292,3 +294,6 @@ footer{
     font-size: 0.9em;
     color: #ffb400;
 }
+
+
+
