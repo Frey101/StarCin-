@@ -1,0 +1,78 @@
+
+
+#container {
+    width: 900px;
+    margin: 7% 0% -1% 24%;
+}
+
+.category-list, .topic-list, .messages {
+    background: #00000075;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 1px 0px 20px 7px rgb(255, 0, 0);
+    margin-bottom: 27.5%;
+}
+
+h2{
+    color: black;
+}
+
+
+
+.category {
+    padding: 12px;
+    border: 1px solid #8b0000;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #8b0000;
+}
+
+.category:hover {
+    background: #ffbb50;
+}
+
+.topic {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.topic:hover { background: #f0f0f0; }
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.vote {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #444;
+    font-weight: bold;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #8b0000;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover { background: #8b0000; }

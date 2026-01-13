@@ -1,0 +1,99 @@
+
+h2{
+    color: #ffffff;
+    font-size: 30px;
+    margin: 2% 0% 2% 1%;
+}
+
+.contact {
+    display: flex;
+    width: 68%;
+    height: 0%;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: stretch;
+    margin: 9% 15% 0% 15%;
+    padding: 1% 2% 3% 2%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+textarea, input{
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+
+/* 2. Styles pour le conteneur principal du formulaire */
+.form-container {
+    background-color: #131313;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 0px 20px 13px rgb(189 0 0);
+}
+
+/* 3. Styles pour le titre */
+.form-container h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* 4. Styles pour chaque groupe de champ (Label + Input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* 5. Styles pour les étiquettes (Labels) */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Styles pour les champs de saisie (Inputs et Textarea) */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Effet au focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #930404;
+    outline: none;
+}
+
+/* 7. Styles pour le bouton d'envoi */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f10a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #730303;
+}
+
