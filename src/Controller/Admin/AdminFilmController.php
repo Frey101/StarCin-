@@ -10,7 +10,7 @@ class AdminFilmController {
 
     public function __construct() {
         $this->filmModel = new FilmModel();
-    }
+    } 
 
     public function listFilms() {
         SecurityController::restrictAccess();

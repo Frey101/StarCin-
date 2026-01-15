@@ -39,6 +39,6 @@
 
     <p>Alyssia Frey et Asya Elik se réservent le droit de modifier les présentes CGU à tout moment afin de les adapter aux évolutions du site ou de la législation.</p>
 
-</div>
+</div> 
 
 </body>

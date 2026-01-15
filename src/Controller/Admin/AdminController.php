@@ -8,7 +8,7 @@ class AdminController
     private AdminModel $model;
 
     public function __construct()
-    {
+    { 
         // Sécurité : accès admin uniquement
         if (!isset($_SESSION['utilisateur_connecte']) || ($_SESSION['user_role'] ?? 'user') !== 'admin') {
             header('Location: ' . ROOT_PATH . 'index.php?action=login&error=unauthorized');

@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label for="prenom">Prenom</label>
                 <input type="text" id="prenom" name="prenom">
-            </div>
+            </div> 
 
             <div class="form-group">
                 <label for="email">Email</label>

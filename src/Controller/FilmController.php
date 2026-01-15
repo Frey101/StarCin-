@@ -8,7 +8,7 @@ class FilmController {
 
     public function __construct() {
         $this->filmModel = new FilmModel();
-    }
+    } 
 
     public function listFilms() {
         $films = $this->filmModel->findAll();

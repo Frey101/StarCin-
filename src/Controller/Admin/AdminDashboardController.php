@@ -8,7 +8,7 @@ class AdminDashboardController
     private PDO $db;
 
     public function __construct()
-    {
+    { 
         SecurityController::restrictAccess(); // admin only
         $this->db = DBConnection::getInstance()->getPDO();
     }

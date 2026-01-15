@@ -11,7 +11,7 @@
         <div class="category" onclick="openCategory('realisateurs')">🎞️ Réalisateurs</div>
         <div class="category" onclick="openCategory('suggestions')">💡 Suggestions des habitants</div>
         <div class="category" onclick="openCategory('archives')">📚 Archives anciennes éditions</div>
-    </div>
+    </div> 
 
     <!-- LISTE DES SUJETS -->
     <div class="topic-list" id="topicList" style="display:none;">

@@ -2,7 +2,7 @@
 
 
 class Film
-{
+{ 
     private ?int $id_film = null;
     private string $titre;
     private string $synopsis;

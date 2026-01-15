@@ -5,7 +5,7 @@
         if (!empty($message_erreur)) {
             echo '<p style="color: red; border: 1px solid red; padding: 10px;">' . htmlspecialchars($message_erreur) . '</p>';
         }
-        ?>
+        ?> 
 
         <form action="index.php?action=login" method="POST">
             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">

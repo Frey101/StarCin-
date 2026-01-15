@@ -6,7 +6,7 @@ $email = $_POST['email'] ?? '';
 
 // Traitement du formulaire POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+ 
     $email = trim($_POST['email'] ?? '');
     $mot_de_passe = $_POST['mdp'] ?? '';
     $confirmation_mdp = $_POST['mdp_confirm'] ?? '';

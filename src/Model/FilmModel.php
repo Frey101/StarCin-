@@ -5,7 +5,7 @@ require_once __DIR__ . '/../Database/DBConnection.php';
 require_once __DIR__ . '/../Entity/Film.php';
 
 class FilmModel
-{
+{ 
     private PDO $pdo;
 
     public function __construct()

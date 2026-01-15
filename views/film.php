@@ -11,7 +11,7 @@
             <div class="rating">
                 ⭐ <span>4.5 / 5</span>
             </div>
-        </header>
+        </header> 
 
         <!-- Affiche + infos -->
         <section class="film-main">

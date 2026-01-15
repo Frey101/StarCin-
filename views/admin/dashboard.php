@@ -11,7 +11,7 @@
         <a href="#comments">💬 Commentaires</a>
         <a href="#stats"> Statistiques</a>
         <a href="#" class="logout"> Déconnexion</a>
-    </aside>
+    </aside> 
 
     <!-- CONTENT -->
     <main class="content">

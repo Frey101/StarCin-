@@ -5,7 +5,7 @@ require_once ROOT_DIR . 'src/Database/DBConnection.php';
 class AdminModel
 {
     private PDO $db;
-
+ 
     public function __construct()
     {
         $this->db = DBConnection::getInstance()->getPDO();

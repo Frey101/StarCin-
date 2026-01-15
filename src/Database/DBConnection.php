@@ -7,7 +7,7 @@ class DBConnection {
 
     // L'objet PDO qui contiendra la connexion active
     private $pdo;
-
+ 
     // --- Paramètres de Connexion (À MODIFIER !) ---
     private $host = 'localhost';
     private $db   = 'cinema';

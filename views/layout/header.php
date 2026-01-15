@@ -10,7 +10,7 @@ if (!isset($_SESSION['csrf_token'])) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head> 
     <meta charset="UTF-8" />
 
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/pa.css" />
