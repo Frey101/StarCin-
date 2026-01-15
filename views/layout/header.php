@@ -10,7 +10,7 @@ if (!isset($_SESSION['csrf_token'])) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
+<head>
     <meta charset="UTF-8" />
 
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/pa.css" />
@@ -37,7 +37,7 @@ if (!isset($_SESSION['csrf_token'])) {
 <header>
     <nav>
         <ul>
-            <img src="<?php echo ROOT_PATH; ?>public/image/logo.png" alt="logo">
+            <li><img src="<?php echo ROOT_PATH; ?>public/image/logo.png" alt="logo"></li>
 
             <li><a href="<?php echo ROOT_PATH; ?>index.php?action=home">Accueil</a></li>
 
@@ -52,7 +52,7 @@ if (!isset($_SESSION['csrf_token'])) {
 
 
                 <?php if ($is_admin): ?>
-                    <li style="font-weight: bold;"><a href="<?php echo ROOT_PATH; ?>index.php?action=admin_dashboard">ADMIN</a></li>
+                    <li style="font-weight: bold;"><a href="<?php echo ROOT_PATH; ?>index.php?action=admin_dashboard">admin</a></li>
                 <?php endif; ?>
 
                 <li><a href="<?php echo ROOT_PATH; ?>index.php?action=logout">Déconnexion</a></li>

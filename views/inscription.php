@@ -8,7 +8,7 @@
             echo '<p style="color: red; border: 1px solid red; padding: 10px;">' . htmlspecialchars($message_erreur) . '</p>';
         }
         ?>
- 
+
         <form action="<?= ROOT_PATH ?>index.php?action=inscription" method="POST">
             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <div>

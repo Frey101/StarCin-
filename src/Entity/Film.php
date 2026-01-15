@@ -2,15 +2,16 @@
 
 
 class Film
-{ 
+{
     private ?int $id_film = null;
-    private string $titre;
-    private string $synopsis;
-    private int $duree;
+    private string $titre = '';
+    private string $synopsis = '';
+    private int $duree = 0;
     private ?string $bandeannonce = null;
     private ?string $datediffusion = null; // format Y-m-d
     private ?string $categorie = null;
     private ?int $annee = null;
+    private ?string $image = null;
 
     /* ===== GETTERS ===== */
 
@@ -54,6 +55,11 @@ class Film
         return $this->annee;
     }
 
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
     /* ===== SETTERS ===== */
 
     public function setIdFilm(int $id): void
@@ -94,6 +100,11 @@ class Film
     public function setAnnee(?int $annee): void
     {
         $this->annee = $annee;
+    }
+
+    public function setImage(?string $image): void
+    {
+        $this->image = $image;
     }
 }
 

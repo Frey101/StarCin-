@@ -3,7 +3,7 @@ h2{
     color: #ffffff;
     font-size: 30px;
     margin: 2% 0% 2% 1%;
-} 
+}
 
 .contact {
     display: flex;
@@ -27,7 +27,7 @@ textarea, input{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 

@@ -13,7 +13,7 @@
         <p>2. Votez par categorie</p>
         <p>3. Découvrez les résultats </p>
     </div>
-</div> 
+</div>
 
 <section class="mf">
     <h1>Meilleurs films</h1>

@@ -3,7 +3,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
     background-color: black;
-} 
+}
 
 .index {
   background-image: url('image/cine.jpg');
@@ -213,55 +213,26 @@ footer{
 }
 
 /*   Page Films   */
-.films nav li {
-
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin-left: -2%;
-    margin-right: 5%;
-}
-.films img{
-    margin-right: 58%;
-    height: 64px;
-    width: 64px;
-    margin-top:-0.1%;
-}
-.films nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 10px;
-    justify-content: flex-end;
-    flex-direction: row;
-    margin-top: -1%;
-    position: fixed;
-    width: 100%;
-    background: #b61f0a;
-    height: 7%;
-    margin-left: -2%;
-}
-
-.films li a{
-    text-decoration: none;
-    color: white;
-}
-
 .page-title {
     text-align: center;
-    margin-top: 7%;
-    font-size: 2em;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #FFB042;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
 }
 
 .films-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: auto;
-    background-color: #ffffff57;
-    padding: 3%;
-    border-radius: 2%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 13px rgb(189 0 0);
 }
 
 .film-card {
@@ -269,31 +240,213 @@ footer{
     border-radius: 12px;
     text-decoration: none;
     color: black;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
     overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .film-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(170, 9, 9, 0.5);
 }
 
 .film-card img {
     width: 100%;
-    height: 260px;
+    height: 280px;
     object-fit: cover;
+    display: block;
 }
 
 .film-card h3 {
-    margin: 10px;
+    margin: 15px;
     font-size: 1.1em;
+    font-weight: 600;
+    color: #000;
 }
 
 .film-card p {
-    margin: 0 10px 10px 10px;
+    margin: 0 15px 15px 15px;
     font-size: 0.9em;
-    color: #ffb400;
+    color: #FFB042;
+    font-weight: 600;
 }
 
+/* ============================================
+   MODAL FILM
+   ============================================ */
+.film-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
 
+.film-modal-content {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    margin: 3% auto;
+    padding: 0;
+    border: 2px solid #b61f0a;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(182, 31, 10, 0.5);
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
 
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.film-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+    background: rgba(182, 31, 10, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.film-modal-close:hover {
+    background: #b61f0a;
+    transform: rotate(90deg);
+}
+
+.film-modal-header {
+    padding: 30px;
+    background: linear-gradient(135deg, #b61f0a 0%, #8a1508 100%);
+    border-bottom: 3px solid #FFB042;
+}
+
+.film-modal-header h2 {
+    color: white;
+    margin: 0 0 15px 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.film-modal-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.film-modal-meta span {
+    color: #FFB042;
+    font-weight: 600;
+    font-size: 0.95em;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.film-modal-body {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.film-modal-image {
+    position: sticky;
+    top: 20px;
+}
+
+.film-modal-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 3px solid #FFB042;
+}
+
+.film-modal-info {
+    color: white;
+}
+
+.film-modal-info h3 {
+    color: #FFB042;
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #b61f0a;
+    padding-bottom: 10px;
+}
+
+.film-modal-info p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 1.05em;
+    margin-bottom: 30px;
+}
+
+/* Responsive pour films-grid */
+@media (max-width: 768px) {
+    .films-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .page-title {
+        margin-top: 80px;
+        font-size: 2em;
+    }
+    
+    .film-modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .film-modal-body {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .film-modal-image {
+        position: static;
+    }
+    
+    .film-modal-header h2 {
+        font-size: 1.5em;
+    }
+    
+    .film-modal-meta {
+        gap: 10px;
+    }
+    
+    .film-modal-meta span {
+        font-size: 0.85em;
+        padding: 4px 10px;
+    }
+}

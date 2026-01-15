@@ -5,7 +5,7 @@
 class DBConnection {
     // Variable statique pour stocker l'unique instance de la classe
     private static $instance = null;
- 
+
     // L'objet PDO qui contiendra la connexion active
     private $pdo;
 

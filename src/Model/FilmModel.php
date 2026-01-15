@@ -5,7 +5,7 @@ require_once __DIR__ . '/../Database/DBConnection.php';
 require_once __DIR__ . '/../Entity/Film.php';
 
 class FilmModel
-{ 
+{
     private PDO $pdo;
 
     public function __construct()
@@ -45,7 +45,6 @@ class FilmModel
         $stmt = $this->pdo->prepare($sql);
 
         $params = [
-
             ':titre'          => $film->getTitre(),
             ':synopsis'       => $film->getSynopsis(),
             ':duree'          => $film->getDuree(),
@@ -53,14 +52,22 @@ class FilmModel
             ':datediffusion'  => $film->getDateDiffusion(),
             ':categorie'      => $film->getCategorie(),
             ':annee'          => $film->getAnnee(),
-
         ];
 
         if ($film->getIdFilm() !== null) {
             $params[':id_film'] = $film->getIdFilm();
         }
 
-        return $stmt->execute($params);
+        $result = $stmt->execute($params);
+        
+        // Si c'est un INSERT, récupérer l'ID généré pour renommer l'image
+        if ($result && $film->getIdFilm() === null) {
+            $newId = (int)$this->pdo->lastInsertId();
+            $film->setIdFilm($newId);
+            // L'image sera renommée dans le contrôleur après l'insertion
+        }
+
+        return $result;
     }
 
     /**
@@ -117,10 +124,15 @@ class FilmModel
         $film->setTitre($data['titre']);
         $film->setSynopsis($data['synopsis']);
         $film->setDuree((int) $data['duree']);
-        $film->setBandeAnnonce($data['bandeannonce']);
-        $film->setDateDiffusion($data['datediffusion']);
-        $film->setCategorie($data['categorie']);
+        $film->setBandeAnnonce($data['bandeannonce'] ?? null);
+        $film->setDateDiffusion($data['datediffusion'] ?? null);
+        $film->setCategorie($data['categorie'] ?? null);
         $film->setAnnee($data['annee'] !== null ? (int)$data['annee'] : null);
+        
+        // Image seulement si la colonne existe
+        if (isset($data['image'])) {
+            $film->setImage($data['image']);
+        }
 
         return $film;
     }

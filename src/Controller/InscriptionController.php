@@ -7,7 +7,7 @@ class InscriptionController {
     public function handleRequest() {
         $bdd = DBConnection::getInstance()->getPDO();
         $message_erreur = '';
- 
+
         // Traitement du formulaire POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // CSRF check

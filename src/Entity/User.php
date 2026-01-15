@@ -1,8 +1,7 @@
 <?php
 
-namespace src\Entity;
 class User
-{ 
+{
     private $id_utilisateur;
     private $email;
     private $mot_de_passe; // Le mot de passe haché

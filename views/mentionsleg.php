@@ -1,6 +1,8 @@
 <body>
     <h1> Modèle de Mentions Légales</h1>
 
+    <p>Conformément à la loi de la rgpd et lcen.</p>
+
     <div class="section">
     <h2>1) Éditeur du site</h2>
 
@@ -8,15 +10,20 @@
             <p>Statut : Étudiante en BUT Informatique de deuxieme année</p>
             <p>88100 Saint-dié-des-Vosges</p>
             <p>11 rue de l'université</p>
-            <p>starcine@gmail.com<</p>
+            <p>starcine@gmail.com</p>
 
     <h2>2) Hébergeur du site</h2>
         <p>Le site est hébergé par :</p>
-        <p>Nom de l'hébergeur : [Ex: Hostinger, OVH, GitHub Pages, Vercel...]</p>
-        <p>Adresse de l'hébergeur : [L'adresse du siège social de ton hébergeur]</p>
-        <p>Contact : [Leur site web ou numéro de téléphone]</p>
+        <p>Nom de l'hébergeur : a venir</p>
+        <p>Adresse de l'hébergeur : a venir</p>
+        <p>Contact : 03 88 57 69 78 </p>
 
-    <h2>3) La propriété intelectuel</h2>
+        <h2>2) Accès au site</h2>
+        <p>Le site est accessible gratuitement à tout utilisateur disposant d'un accès à internet. Les éditrices s'efforcent de maintenir le site accessible 24h/24 et 7j/7, mais ne peuvent être tenues responsables en cas d'interruption pour maintenance ou problème technique.</p>
+
+
+
+        <h2>3) La propriété intelectuelle</h2>
 
         <p>L'ensemble des contenus (textes, images, graphismes, logo) présents sur ce site est la propriété exclusive de FREY Alysia et ELIK Asya, sauf mention contraire. Toute reproduction, distribution, modification ou adaptation de ces différents éléments est strictement interdite sans l'accord écrit de l'auteur.</p>
 
@@ -25,10 +32,10 @@
         <p>Formulaire de contact : Les données collectées (nom, adresse email, message) sont utilisées exclusivement pour répondre aux demandes de l'utilisateur. Ces données ne sont ni cédées à des tiers, ni utilisées à des fins commerciales.</p>
             <p> Système de vote : La participation aux votes sur ce site est strictement anonyme. Aucune donnée permettant d'identifier personnellement l'électeur (nom, IP, email) n'est associée au vote dans la base de données.  </p>
 
-        <p>  Durée de conservation : Les données du formulaire de contact sont supprimées dès que l'échange est terminé, sauf demande contraire de l'utilisateur.  </p>
+        <p>  Durée de conservation : Les données du formulaire de contact sont supprimées quand la session de vote sera terminé, sauf demande contraire de l'utilisateur.  </p>
 
         <p>  Droits des utilisateurs : Vous disposez d’un droit d’accès, de rectification et de suppression des données vous concernant.</p>
-
+        <p>Contact : contact@starcine.com</p>
     <h2>5) Cookies</h2>
         <p>Ce site peut utiliser des cookies pour améliorer l'expérience utilisateur. Un bandeau de consentement vous permet de les accepter ou de les refuser lors de votre première visite.</p>
 

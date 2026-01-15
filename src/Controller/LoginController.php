@@ -7,7 +7,7 @@ require_once __DIR__ . '/../Entity/User.php';
 
 class LoginController {
     private $userModel;
- 
+
     public function __construct() {
         // Le constructeur initialise le Modèle pour accéder à la base de données
         $this->userModel = new UserModel();

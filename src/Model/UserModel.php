@@ -1,8 +1,6 @@
 <?php
 // src/Model/UserModel.php
 
-use src\Entity\User;
-
 require_once __DIR__ . '/../Database/DBConnection.php';
 require_once __DIR__ . '/../Entity/User.php';
 
@@ -10,7 +8,7 @@ require_once __DIR__ . '/../Entity/User.php';
 
 class UserModel {
     private $pdo;
- 
+
     public function __construct() {
         $this->pdo = DBConnection::getInstance()->getPDO();
     }
