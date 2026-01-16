@@ -2,6 +2,7 @@
 
 $is_logged_in = isset($_SESSION['utilisateur_connecte']) && $_SESSION['utilisateur_connecte'] === true;
 $is_admin = $is_logged_in && ($_SESSION['user_role'] ?? 'user') === 'admin';
+$is_realisateur = $is_logged_in && !$is_admin && (new \RealisateurModel())->isRealisateur($_SESSION['user_id'] ?? 0);
 
 // CSRF token
 if (!isset($_SESSION['csrf_token'])) {
@@ -46,10 +47,13 @@ if (!isset($_SESSION['csrf_token'])) {
 
             <?php if ($is_logged_in): ?>
 
-                <li><a href="<?php echo ROOT_PATH; ?>index.php?action=vote_page">Vote</a></li>
-                <li><a href="<?php echo ROOT_PATH; ?>index.php?action=resultat_page">Resultat</a></li>
-                <li><a href="<?php echo ROOT_PATH; ?>index.php?action=forum_page">Forum</a></li>
-
+                <?php if (!$is_realisateur): ?>
+                    <li><a href="<?php echo ROOT_PATH; ?>index.php?action=vote_page">Vote</a></li>
+                    <li><a href="<?php echo ROOT_PATH; ?>index.php?action=resultat_page">Resultat</a></li>
+                    <li><a href="<?php echo ROOT_PATH; ?>index.php?action=forum_page">Forum</a></li>
+                <?php else: ?>
+                    <li><a href="<?php echo ROOT_PATH; ?>index.php?action=proposition_form">Proposer un Film</a></li>
+                <?php endif; ?>
 
                 <?php if ($is_admin): ?>
                     <li style="font-weight: bold;"><a href="<?php echo ROOT_PATH; ?>index.php?action=admin_dashboard">admin</a></li>

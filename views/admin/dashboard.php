@@ -21,6 +21,9 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_users" class="nav-link">
                 Utilisateurs
             </a>
+            <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_realisateurs" class="nav-link">
+                Réalisateurs
+            </a>
             <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_propositions" class="nav-link">
                 Propositions
                 <?php if (isset($stats['propositions']) && $stats['propositions'] > 0): ?>

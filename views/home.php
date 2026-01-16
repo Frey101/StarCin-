@@ -1,3 +1,9 @@
+<?php if (isset($_GET['error']) && $_GET['error'] === 'realisateur_restricted'): ?>
+    <div class="alert alert-error" style="max-width: 800px; margin: 20px auto; padding: 15px; background: rgba(220, 38, 38, 0.2); border: 2px solid #dc2626; border-radius: 8px; color: white;">
+        Les réalisateurs n'ont pas accès à cette fonctionnalité.
+    </div>
+<?php endif; ?>
+
 <div class="acc">
     <h1>StarCiné</h1>
 

@@ -20,11 +20,13 @@ require_once ROOT_DIR . 'src/Database/DBConnection.php';
 require_once ROOT_DIR . 'src/Controller/SecurityController.php';
 require_once ROOT_DIR . 'src/Controller/LoginController.php';
 require_once ROOT_DIR . 'src/Controller/InscriptionController.php';
+require_once ROOT_DIR . 'src/Controller/PropositionController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminFilmController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminDashboardController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminUserController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminPropositionController.php';
 require_once ROOT_DIR . 'src/Controller/Admin/AdminSessionController.php';
+require_once ROOT_DIR . 'src/Controller/RealisateurController.php';
 require_once ROOT_DIR . 'src/Controller/ResultatController.php';
 require_once ROOT_DIR . 'src/Controller/VoteController.php';
 require_once ROOT_DIR . 'src/Entity/SessionVote.php';
@@ -121,6 +123,12 @@ else if ($action === 'inscription') {
     $inscriptionController->handleRequest();
 }
 
+else if ($action === 'proposition_form') {
+
+    $propositionController = new PropositionController();
+    $propositionController->showPropositionForm();
+}
+
 
 
  else if ($action === 'login' || $action === 'logout') {
@@ -172,6 +180,16 @@ else if (strpos($action, 'admin_') === 0) {
             $adminSessionController->createSession();
         } elseif ($action === 'admin_delete_session') {
             $adminSessionController->deleteSession();
+        }
+    }
+    elseif (in_array($action, ['admin_realisateurs', 'admin_add_realisateur', 'admin_remove_realisateur'])) {
+        $realisateurController = new RealisateurController();
+        if ($action === 'admin_realisateurs') {
+            $realisateurController->listRealisateurs();
+        } elseif ($action === 'admin_add_realisateur') {
+            $realisateurController->addRealisateur();
+        } elseif ($action === 'admin_remove_realisateur') {
+            $realisateurController->removeRealisateur();
         }
     }
     elseif ($action === 'admin_delete_comment') {
