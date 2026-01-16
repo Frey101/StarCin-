@@ -11,7 +11,7 @@ if (!defined('ROOT_DIR')) {
 
 // ROOT_PATH : Chemin URL pour les liens et les redirections header
 if (!defined('ROOT_PATH')) {
-    define('ROOT_PATH', '/StarCin--main/');
+    define('ROOT_PATH', '/StarCin-/');
 }
 
 
@@ -68,21 +68,18 @@ if ($action === 'home') {
 
 
 }
-else if ($action === 'vote_page') {
-    // Ici, vous pourriez instancier un FilmController pour charger les données
-    // require_once ROOT_DIR . 'src/Controller/FilmController.php';
-    // $filmController = new FilmController();
-    // $data = $filmController->getFilms();
-    require ROOT_DIR . 'views/layout/header.php';
-    require ROOT_DIR . 'views/vote.php';
-    require ROOT_DIR . 'views/layout/footer.php';
+else if ($action === 'vote_page' || $action === 'submit_vote') {
+    $voteController = new VoteController();
+    if ($action === 'submit_vote') {
+        $voteController->submitVote();
+    } else {
+        $voteController->showVotePage();
+    }
 }
 
 else if ($action === 'resultat_page') {
-
-    require ROOT_DIR . 'views/layout/header.php';
-    require ROOT_DIR . 'views/resultat.php';
-    require ROOT_DIR . 'views/layout/footer.php';
+    $resultatController = new ResultatController();
+    $resultatController->showResults();
 }
 
 else if ($action === 'forum_page') {
