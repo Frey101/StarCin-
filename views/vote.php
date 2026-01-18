@@ -5,8 +5,8 @@ $error = $error ?? $_GET['error'] ?? null;
 $status = $_GET['status'] ?? null;
 $isAdmin = isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin';
 ?>
-
-<h1 class="page-title">Vote : Choisissez votre film préféré !</h1>
+<div class="page-title"></div>
+<h1 >Vote : Choisissez votre film préféré !</h1>
 
 <?php if ($isAdmin): ?>
     <div class="alert alert-warning" style="max-width: 800px; margin: 20px auto; padding: 15px; background: rgba(255, 193, 7, 0.2); border: 2px solid #ffc107; border-radius: 8px; color: white;">
