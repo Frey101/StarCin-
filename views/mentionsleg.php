@@ -1,9 +1,11 @@
 <body>
+
+    <div class="titre">
     <h1> Modèle de Mentions Légales</h1>
 
     <p>Conformément à la loi de la rgpd et lcen.</p>
-
-    <div class="section">
+    </div>
+    <div class="sectionment">
     <h2>1) Éditeur du site</h2>
 
             <p>FREY Alyssia et ELIK Asya</p>

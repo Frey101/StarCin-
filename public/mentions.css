@@ -2,8 +2,8 @@ body{
     background-color: red;
 }
 
-h1{
 
+.titre h1{
     color: white;
     text-align: center;
     padding: 8px;
@@ -12,19 +12,21 @@ h1{
 }
 
 
-.section {
+
+
+.sectionment {
     background-color: #00000078;
     border-radius: 18px;
     width: 80%;
     margin: 3% 10% 0% 10%;
     padding: 1%;
 }
-.section p{
+.sectionment p{
     color: white;
 }
 
 
-h2{
+.sectionment h2{
     color: #f8c006;
     text-decoration: underline;
     text-align: left;
