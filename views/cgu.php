@@ -1,7 +1,10 @@
 <body>
+<div class="titrec">
 <h1> CGU</h1>
+    <p>Conformément à la loi de la rgpd et lcen.</p>
+</div>
 
-<div class="section">
+<div class="sectioncgu">
     <h2>1) Objet</h2>
 
     <p>Les présentes CGU ont pour objet de définir les modalités de mise à disposition du site et les conditions d'utilisation par l'utilisateur. Toute consultation ou utilisation du site implique l'acceptation sans réserve des présentes conditions.</p>

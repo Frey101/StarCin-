@@ -23,6 +23,7 @@ if (!isset($_SESSION['csrf_token'])) {
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/connexion.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/condigene.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/mentions.css" />
+    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/cgu.css" />
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/admin.css" />
     <?php if (strpos($_GET['action'] ?? '', 'admin') === 0): ?>
     <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>public/admin.css" />

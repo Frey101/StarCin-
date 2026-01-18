@@ -1,0 +1,33 @@
+body{
+    background-color: red;
+}
+
+.titrec h1{
+    color: white;
+    text-align: center;
+    padding: 8px;
+    background-color: #ffffff61;
+    border-radius: 11px;
+}
+
+
+.sectioncgu {
+    background-color: #00000078;
+    border-radius: 18px;
+    width: 80%;
+    margin: 3% 10% 0% 10%;
+    padding: 1%;
+}
+.sectioncgu p{
+    color: white;
+}
+
+
+.sectioncgu h2{
+    color: #f8c006;
+    text-decoration: underline;
+    text-align: left;
+    margin: 2% 10% 3% 10%;
+    font-size: 23px;
+
+}
