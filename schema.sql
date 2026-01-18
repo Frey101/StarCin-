@@ -291,6 +291,12 @@ INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `email`, `mot_de_p
 
 INSERT INTO `administrateur` (`id_admin`, `id_utilisateur`) VALUES
 (1, 1);
+INSERT INTO `utilisateur` (`nom`, `prenom`, `email`, `mot_de_passe`, `ville`, `role`) VALUES
+('Director', 'Example', 'realisateur@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user');
+
+INSERT INTO `realisateur` (`id_utilisateur`) VALUES
+(LAST_INSERT_ID());
+
 
 INSERT INTO `film` (`id_film`, `titre`, `synopsis`, `duree`, `bandeannonce`, `datediffusion`, `categorie`, `annee`) VALUES
 (1, 'Inception', 'A mind-bending thriller', 148, NULL, NULL, 'Science-Fiction', 2010),

@@ -36,7 +36,7 @@ class AdminSessionController
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $data = $_POST;
-            $adminId = $this->getAdminId();
+            $adminId = $this->getAdminId(); 
             
             if (!$adminId) {
                 $message = "Erreur : administrateur non trouvé.";
@@ -69,7 +69,7 @@ class AdminSessionController
         header('Location: ' . ROOT_PATH . 'index.php?action=admin_sessions');
         exit;
     }
-
+//chercher l'id de l'admin connecté afin de créer une session de vote
     private function getAdminId(): ?int
     {
         $userId = $_SESSION['user_id'] ?? null;
