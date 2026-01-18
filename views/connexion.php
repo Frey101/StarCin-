@@ -6,7 +6,7 @@
             echo '<p style="color: red; border: 1px solid red; padding: 10px;">' . htmlspecialchars($message_erreur) . '</p>';
         }
         ?>
-
+        <div class="form-connex">
         <form action="index.php?action=login" method="POST">
             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <div>
@@ -21,6 +21,7 @@
 
             <button type="submit">Se connecter</button>
         </form>
+        </div>
     </main>
 
 
