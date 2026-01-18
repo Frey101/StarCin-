@@ -68,11 +68,12 @@ textarea, input{
 .form-group-contact textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff000042;
     border-radius: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s;
-    color: white;
+    color: #ffffff;
+    background-color: black;
 }
 
 /* Effet au focus */
