@@ -62,6 +62,8 @@ p{
     background: #aa0909;
     height: 7%;
     margin-left: -2%;
+    position: fixed;
+    z-index: 9999;
 }
 
 .index li a{
