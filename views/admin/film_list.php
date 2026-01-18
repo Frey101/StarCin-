@@ -25,9 +25,7 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=home" class="nav-link">
                 Retour au site
             </a>
-            <a href="<?php echo ROOT_PATH; ?>index.php?action=logout" class="logout">
-                Déconnexion
-            </a>
+
         </div>
     </aside>
 
@@ -54,13 +52,14 @@
 
         <section class="admin-section">
             <div class="section-header">
+
+
+            
+            <div class="table-container">
                 <h2>Liste des Films</h2>
                 <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_add_film" class="btn-add">
                     + Ajouter un film
                 </a>
-            </div>
-            
-            <div class="table-container">
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -110,6 +109,7 @@
                         <?php endif; ?>
                     </tbody>
                 </table>
+            </div>
             </div>
         </section>
     </main>

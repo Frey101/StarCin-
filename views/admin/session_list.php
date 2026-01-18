@@ -28,9 +28,7 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=home" class="nav-link">
                 Retour au site
             </a>
-            <a href="<?php echo ROOT_PATH; ?>index.php?action=logout" class="logout">
-                Déconnexion
-            </a>
+
         </div>
     </aside>
 
@@ -55,14 +53,16 @@
         <?php endif; ?>
 
         <section class="admin-section">
-            <div class="section-header">
-                <h2>Liste des Sessions de Vote</h2>
-                <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_create_session" class="btn-add">
-                    + Créer une session de vote
-                </a>
-            </div>
+
             
             <div class="table-container">
+
+                <div class="section-header">
+                    <h2>Liste des Sessions de Vote</h2>
+                    <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_create_session" class="btn-add">
+                        + Créer une session de vote
+                    </a>
+                </div>
                 <?php if (empty($sessions)): ?>
                     <div style="text-align: center; padding: 40px;">
                         <p>Aucune session de vote enregistrée.</p>

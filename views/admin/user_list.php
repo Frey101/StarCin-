@@ -25,9 +25,7 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=home" class="nav-link">
                 Retour au site
             </a>
-            <a href="<?php echo ROOT_PATH; ?>index.php?action=logout" class="logout">
-                Déconnexion
-            </a>
+
         </div>
     </aside>
 
@@ -52,11 +50,12 @@
         <?php endif; ?>
 
         <section class="admin-section">
-            <div class="section-header">
-                <h2>Liste des Utilisateurs</h2>
-            </div>
+
             
             <div class="table-container">
+                <div class="section-header">
+                    <h2>Liste des Utilisateurs</h2>
+                </div>
                 <table class="data-table">
                     <thead>
                         <tr>
