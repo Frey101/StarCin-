@@ -36,6 +36,42 @@ if (!isset($_SESSION['csrf_token'])) {
 </head>
 
 <body class="index">
+<div id="cookie-popup" class="cookie-container">
+    <p>Ce site utilise des cookies pour améliorer votre expérience. 🍪</p>
+    <div class="cookie-buttons">
+        <button id="deny-cookies" class="cookie-btn btn-deny">Refuser</button>
+        <button id="accept-cookies" class="cookie-btn btn-accept">Accepter</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cookiePopup = document.getElementById('cookie-popup');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const denyBtn = document.getElementById('deny-cookies');
+
+        // On vérifie si un choix (quel qu'il soit) a déjà été fait
+        if (localStorage.getItem('cookieConsent')) {
+            cookiePopup.style.display = 'none';
+        }
+
+        // Cas : Accepter
+        acceptBtn.addEventListener('click', () => {
+            cookiePopup.style.display = 'none';
+            localStorage.setItem('cookieConsent', 'accepted');
+            console.log("Cookies acceptés");
+            // Ici, tu peux charger tes scripts de stats (Google Analytics, etc.)
+        });
+
+        // Cas : Refuser
+        denyBtn.addEventListener('click', () => {
+            cookiePopup.style.display = 'none';
+            localStorage.setItem('cookieConsent', 'denied');
+            console.log("Cookies refusés");
+            // Ici, on ne charge rien, on respecte le choix
+        });
+    });
+</script>
 <header>
     <nav>
         <ul>

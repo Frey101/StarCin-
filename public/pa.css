@@ -452,3 +452,55 @@ footer{
         padding: 4px 10px;
     }
 }
+
+
+
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    z-index: 10001; /* Toujours plus haut que le header */
+    display: flex;
+    flex-direction: column; /* Texte en haut, boutons en bas sur mobile */
+    align-items: center;
+    gap: 15px;
+}
+
+@media (min-width: 600px) {
+    .cookie-container {
+        flex-direction: row; /* Aligné sur PC */
+        justify-content: space-between;
+    }
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-accept {
+    background-color: #f1c40f;
+    color: #000;
+}
+
+.btn-deny {
+    background-color: #444;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.btn-deny:hover {
+    background-color: #666;
+}
