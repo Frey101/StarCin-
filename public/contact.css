@@ -49,33 +49,35 @@ textarea, input{
 }
 
 /* 4. Styles pour chaque groupe de champ (Label + Input) */
-.form-group {
+.form-group-contact {
     margin-bottom: 20px;
 }
 
 /* 5. Styles pour les étiquettes (Labels) */
-.form-group label {
+.form-group-contact label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #ffffff;
+    color: white;
 }
 
 /* Styles pour les champs de saisie (Inputs et Textarea) */
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+.form-group-contact input[type="text"],
+.form-group-contact input[type="email"],
+.form-group-contact input[type="number"],
+.form-group-contact textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s;
+    color: white;
 }
 
 /* Effet au focus */
-.form-group input:focus,
-.form-group textarea:focus {
+.form-group-contact input:focus,
+.form-group-contact textarea:focus {
     border-color: #930404;
     outline: none;
 }
