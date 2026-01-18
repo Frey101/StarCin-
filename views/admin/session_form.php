@@ -28,9 +28,7 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=home" class="nav-link">
                 Retour au site
             </a>
-            <a href="<?php echo ROOT_PATH; ?>index.php?action=logout" class="logout">
-                Déconnexion
-            </a>
+
         </div>
     </aside>
 

@@ -480,7 +480,7 @@
     backdrop-filter: blur(15px);
     border-radius: 15px;
     padding: 40px;
-    margin-top: 17%;
+    margin-top: 15%;
     box-shadow: 
         0 10px 40px rgba(0, 0, 0, 0.6),
         inset 0 0 100px rgba(196, 30, 58, 0.1);
@@ -575,6 +575,8 @@
 .btn-add {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
+    padding: 2%;
+    margin: 1% 0% 3% 3%;
 }
 
 .btn-add:hover {

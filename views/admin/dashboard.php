@@ -35,9 +35,7 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=home" class="nav-link">
                 Retour au site
             </a>
-            <a href="<?php echo ROOT_PATH; ?>index.php?action=logout" class="logout">
-                Déconnexion
-            </a>
+
         </div>
     </aside>
 
@@ -100,14 +98,15 @@
 
         <!-- Gérer les films -->
         <section id="films" class="admin-section">
-            <div class="section-header">
-                <h2>Gérer les Films</h2>
-                <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_add_film" class="btn-add">
-                    + Ajouter un film
-                </a>
-            </div>
+
             
             <div class="table-container">
+                <div class="section-header">
+                    <h2>Gérer les Films</h2>
+                    <a href="<?php echo ROOT_PATH; ?>index.php?action=admin_add_film" class="btn-add">
+                        + Ajouter un film
+                    </a>
+                </div>
                 <div class="table-actions">
                     <input type="text" id="searchFilms" class="search-input" placeholder="Rechercher un film...">
                 </div>
@@ -160,11 +159,12 @@
 
         <!-- Gérer les utilisateurs -->
         <section id="users" class="admin-section">
-            <div class="section-header">
-                <h2>Utilisateurs</h2>
-            </div>
-            
+
             <div class="table-container">
+                <div class="section-header">
+                    <h2>Utilisateurs</h2>
+                </div>
+
                 <input type="text" id="searchUsers" class="search-input" placeholder="Rechercher un utilisateur...">
                 <table class="data-table">
                     <thead>
@@ -213,11 +213,12 @@
 
         <!-- Propositions -->
         <section id="propositions" class="admin-section">
-            <div class="section-header">
-                <h2>Propositions de Films</h2>
-            </div>
+
             
             <div class="table-container">
+                <div class="section-header">
+                    <h2>Propositions de Films</h2>
+                </div>
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -276,11 +277,12 @@
 
         <!-- Commentaires -->
         <section id="comments" class="admin-section">
-            <div class="section-header">
-                <h2>Commentaires</h2>
-            </div>
+
             
             <div class="table-container">
+                <div class="section-header">
+                    <h2>Commentaires</h2>
+                </div>
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -414,4 +416,4 @@ window.onclick = function(event) {
 }
 </script>
 
-<?php require ROOT_DIR . 'views/layout/footer.php'; ?>
+
