@@ -14,9 +14,7 @@
             <a href="<?php echo ROOT_PATH; ?>index.php?action=home" class="nav-link">
                 Retour à l'accueil
             </a>
-            <a href="<?php echo ROOT_PATH; ?>index.php?action=logout" class="logout">
-                Déconnexion
-            </a>
+
         </nav>
     </aside>
 
@@ -141,4 +139,3 @@ document.getElementById('commentaire').addEventListener('input', function() {
 });
 </script>
 
-<?php require ROOT_DIR . 'views/layout/footer.php'; ?>

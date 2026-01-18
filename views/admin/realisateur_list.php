@@ -201,4 +201,3 @@ window.onclick = function(event) {
 };
 </script>
 
-<?php require ROOT_DIR . 'views/layout/footer.php'; ?>
