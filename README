@@ -6,18 +6,18 @@
 
 ---
 
-## 📝 Présentation du Projet
+## Présentation du Projet
 
 **StarCiné** est une application web dynamique et sécurisée conçue dans le cadre de la **SAÉ 3.01 (Développement d'une application)**. L'objectif principal de ce projet est de remplacer le vote papier traditionnel par un système électoral numérique fiable, transparent et hautement sécurisé.
 
-### 🎬 Contexte choisi : Le Cinéma Communautaire
+### Contexte choisi : Le Cinéma Communautaire
 Pour ce projet, nous avons choisi le contexte **culturel et cinématographique**. **StarCiné** permet aux membres d'une communauté ou d'un cinéma local de voter pour désigner les films à l'affiche, d'élire le "Film de l'année", ou de départager des propositions de réalisateurs. 
 
 Le mode de scrutin implémenté est le **scrutin majoritaire à un tour** (avec contraintes d'unicité et d'anonymat stricts)[cite: 5].
 
 ---
 
-## 🔒 Exigences et Sécurité (Cahier des Charges)
+## Exigences et Sécurité (Cahier des Charges)
 
 Conformément aux directives strictes du sujet de l'IUT, l'architecture de StarCiné implémente nativement les piliers électoraux suivants[cite: 5] :
 
@@ -31,7 +31,7 @@ Conformément aux directives strictes du sujet de l'IUT, l'architecture de StarC
 
 ---
 
-## 🛠️ Fonctionnalités Implémentées
+## Fonctionnalités Implémentées
 
 ### Espace Public / Électeurs
 * **Authentification sécurisée :** Système de sessions PHP pour la gestion des comptes (Visiteurs, Membres, Administrateurs, Réalisateurs).
@@ -46,7 +46,7 @@ Conformément aux directives strictes du sujet de l'IUT, l'architecture de StarC
 
 ---
 
-## 💻 Technologies et Architecture
+## Technologies et Architecture
 
 Le projet a été développé en **PHP natif** (sans framework) afin de maîtriser l'architecture fondamentale du web et d'assurer une qualité logicielle maîtrisée à la racine.
 
@@ -57,7 +57,7 @@ Le projet a été développé en **PHP natif** (sans framework) afin de maîtris
 
 ---
 
-## 📈 Démarche Qualité & Versioning
+## Démarche Qualité & Versioning
 
 Conformément à la ressource **R3.04 (Qualité de développement)**, une attention particulière a été accordée à la structure du projet[cite: 5] :
 * **Git & Workflow Collaboratif :** Messages de commits sémantiques et explicites matérialisant la répartition équitable du travail au sein du binôme[cite: 5].
@@ -66,7 +66,7 @@ Conformément à la ressource **R3.04 (Qualité de développement)**, une attent
 
 ---
 
-## 🚀 Installation et Lancement Local
+## Installation et Lancement Local
 
 ### Prérequis
 * Un serveur local (XAMPP, WAMP, MAMP ou Docker) avec **PHP 8.0+** et **MySQL**.
