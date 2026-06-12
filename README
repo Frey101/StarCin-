@@ -75,7 +75,20 @@ Conformément à la ressource **R3.04 (Qualité de développement)**, une attent
 1. **Cloner le dépôt :**
 ```bash
    git clone [https://github.com/Frey101/StarCin-.git](https://github.com/Frey101/StarCin-.git)
+## 🔑 Identifiants de Test et Connexion
 
+Pour tester les différents rôles et privilèges de la plateforme, cliquez sur l'onglet **Connexion** de l'application et utilisez les comptes pré-configurés ci-dessous :
+
+| Rôle / Profil | Adresse e-mail | Mot de passe | Privilèges associés |
+| :--- | :--- | :--- | :--- |
+| **Administrateur** | `admin@starcin.com` | `password` | Gestion totale (CRUD), configuration temporelle du scrutin. |
+| **Réalisateur** | `realisateur@example.com` | `password` | Proposition de contenus, interaction sur le forum. |
+| **Utilisateur (Électeur)** | `user@example.com` | `password` | Consultation des fiches, vote unique et irréversible. |
+
+> 💡 **Note de sécurité :** L'ensemble des mots de passe de ces profils de test est chiffré en base de données à l'aide de l'algorithme `bcrypt`.
+
+---
+*Développé avec rigueur et passion pour la culture cinématographique et l'ingénierie web.*
 
 Asya ELIK 
 Alyssia FREY 
