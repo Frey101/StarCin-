@@ -1,3 +1,95 @@
+# StarCiné — Application Web de Gestion Électorale (SAÉ 3.01)
+
+> **Projet académique — BUT2 Informatique (Semestre 3) — IUT de Saint-Dié**  
+> **Binôme :** Alyssia Frey & [Nom de votre binôme]  
+> **Enseignants référents :** R3.01 (Développement Web) & R3.04 (Qualité de Développement)
+
+---
+
+## Présentation du Projet
+
+**StarCiné** est une application web dynamique et sécurisée conçue dans le cadre de la **SAÉ 3.01 (Développement d'une application)**[cite: 5]. L'objectif principal de ce projet est de remplacer le vote papier traditionnel par un système électoral numérique fiable, transparent et hautement sécurisé[cite: 5].
+
+### Contexte choisi : Le Cinéma Communautaire
+Pour ce projet, nous avons choisi le contexte **culturel et cinématographique**[cite: 5]. **StarCiné** permet aux membres d'une communauté ou d'un cinéma local de voter pour désigner les films à l'affiche, d'élire le "Film de l'année", ou de départager des propositions de réalisateurs. 
+
+Le mode de scrutin implémenté est le **scrutin majoritaire à un tour** (avec contraintes d'unicité et d'anonymat stricts)[cite: 5].
+
+---
+
+## Exigences et Sécurité (Cahier des Charges)
+
+Conformément aux directives strictes du sujet de l'IUT, l'architecture de StarCiné implémente nativement les piliers électoraux suivants[cite: 5] :
+
+*   **Anonymat absolu et irréversible :** Séparation technique totale en base de données entre l'émargement de l'électeur et son bulletin de vote[cite: 5]. Aucune clé étrangère ni journalisation ne permet de relier l'identité d'un utilisateur à son vote[cite: 5].
+*   **Unicité du scrutin :** Un électeur authentifié ne peut voter qu'une seule fois par session électorale[cite: 5]. Dès que le bulletin est soumis, l'action est enregistrée dans la table d'émargement et devient irréversible[cite: 5].
+*   **Gestion temporelle automatisée :** 
+    *   *Avant le scrutin :* Accès aux fiches des candidats/films uniquement, vote bloqué[cite: 5].
+    *   *Pendant le scrutin :* Vote ouvert aux utilisateurs éligibles[cite: 5].
+    *   *Après la clôture :* Calcul et proclamation automatique des résultats agrégés[cite: 5].
+*   **Secret partiel absolu :** Aucun résultat partiel ou tendance n'est accessible avant la clôture électorale, y compris pour les administrateurs du site[cite: 5].
+
+---
+
+## 🛠️ Fonctionnalités Implémentées
+
+### Espace Public / Électeurs
+*   **Authentification sécurisée :** Système de sessions PHP pour la gestion des comptes (Visiteurs, Membres, Administrateurs).
+*   **Consultation dynamique :** Affichage des films/candidats en lice via des fiches générées dynamiquement en PHP.
+*   **Espace de vote :** Interface épurée et ergonomique permettant de soumettre son choix en un clic[cite: 5].
+*   **Outils Collaboratifs :** Intégration d'un **forum communautaire** (chat/commentaires publics) permettant aux membres d'échanger sur les films[cite: 5].
+
+### Espace Administration (Dashboard)
+*   **Opérations CRUD complètes :** Interface dédiée à l'ajout, la modification ou la suppression de films, candidats ou comptes utilisateurs.
+*   **Contrôle du Scrutin :** Configuration des dates d'ouverture et de fermeture de l'élection.
+*   **Visualisation des résultats :** Restitution graphique et analytique des résultats agrégés immédiatement après la clôture du scrutin[cite: 5].
+
+---
+
+## Technologies et Architecture
+
+Le projet a été développé en **PHP natif** (sans framework) afin de maîtriser l'architecture fondamentale du web et d'assurer une qualité logicielle maîtrisée à la racine.
+
+*   **Back-End :** PHP 8.x (Architecture **MVC** - Modèle-Vue-Contrôleur) respectant les principes de conception **SOLID** (notamment la responsabilité unique SRP).
+*   **Persistance :** SGBD relationnel **MySQL**, requêtes d'abstraction via **PDO**.
+*   **Sécurité :** Utilisation systématique de **requêtes préparées** pour éradiquer les injections SQL, chiffrement des mots de passe en base (bcrypt), et filtrage des entrées (XSS).
+*   **Front-End :** HTML5 sémantique, CSS3 (modules *Flexbox* et *Grid*) assurant un design fluide et adaptatif (**Responsive Design**)[cite: 5].
+
+---
+
+## Démarche Qualité & Versioning
+
+Conformément à la ressource **R3.04 (Qualité de développement)**, une attention particulière a été accordée à la structure du projet[cite: 5] :
+*   **Git & Workflow Collaboratif :** Messages de commits sémantiques et explicites matérialisant la répartition équitable du travail au sein du binôme[cite: 5].
+*   **Jeux d'essais :** Validation systématique des scénarios de vote aux limites du calendrier (avant, pendant, après)[cite: 5].
+*   **Documentation :** Code commenté et architecture modulaire facilitant la maintenabilité de l'application selon la norme ISO 25010.
+
+---
+
+## Installation et Lancement Local
+
+### Prérequis
+*   Un serveur local (XAMPP, WAMP, MAMP ou Docker) avec **PHP 8.0+** et **MySQL**.
+
+### Étapes
+1.  **Cloner le dépôt :**
+```bash
+    git clone [https://github.com/Frey101/StarCin-.git](https://github.com/Frey101/StarCin-.git)
+    ```
+2.  **Configurer la Base de Données :**
+*   Importer le fichier SQL de configuration (fourni dans le dossier `/database` ou `/sql`) dans votre outil de gestion (phpMyAdmin, Workbench).
+*   Vérifier les identifiants de connexion dans le fichier de configuration de l'application (`/config` ou variables d'environnement).
+3.  **Lancer le serveur :**
+*   Déplacer le dossier du projet dans votre répertoire racine web (`htdocs`, `www`).
+*   Ouvrir votre navigateur et accéder à `http://localhost/StarCin-`.
+
+---
+*Développé avec rigueur et passion pour la culture cinématographique et l'ingénierie web.*
+
+
+
+
+
 Asya ELIK 
 Alyssia FREY 
 
