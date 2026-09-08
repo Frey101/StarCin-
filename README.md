@@ -30,7 +30,7 @@ Conformément aux directives strictes du sujet de l'IUT, l'architecture de StarC
 
 ---
 
-## 🛠️ Fonctionnalités Implémentées
+##  Fonctionnalités Implémentées
 
 ### Espace Public / Électeurs
 * **Authentification sécurisée :** Système de sessions PHP pour la gestion des comptes (Visiteurs, Membres, Administrateurs, Réalisateurs).
